@@ -31,7 +31,7 @@ function salvarRecurso() {
     let fonte = document.getElementById('fonte').value;
 
     if (nome.trim() === "") {
-        alert("Ops! 🛑 Você esqueceu de colocar o Nome!");
+        alert("Ops!  Você esqueceu de colocar o Nome!");
         return;
     }
 
@@ -73,11 +73,11 @@ function atualizarLista() {
         let cartaoHTML = `
             <div class="card-recurso">
                 <span class="gaveta-badge">${item.gaveta}</span>
-                <h3>📌 ${item.nome}</h3>
-                <p><strong>🧠 Conceito:</strong> ${item.conceito}</p>
-                <p><strong>👦👧 Público:</strong> ${item.publico}</p>
-                <p><strong>🎨 Uso Pedagógico:</strong> ${item.uso}</p>
-                <p><strong>🔗 Fonte:</strong> ${item.fonte}</p>
+                <h3> ${item.nome}</h3>
+                <p><strong> Conceito:</strong> ${item.conceito}</p>
+                <p><strong> Público:</strong> ${item.publico}</p>
+                <p><strong> Uso Pedagógico:</strong> ${item.uso}</p>
+                <p><strong> Fonte:</strong> ${item.fonte}</p>
             </div>
         `;
         divLista.innerHTML += cartaoHTML; 
