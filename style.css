@@ -1,3 +1,6 @@
+* {
+    box-sizing: border-box;
+}
 
 body {
     font-family: 'Comic Sans MS', 'Chalkboard SE', cursive, sans-serif;
@@ -15,12 +18,16 @@ h1 {
     text-shadow: 3px 3px 0px #FFB6C1;
     font-size: 2.5em;
     margin-bottom: 10px;
+    text-align: center; 
 }
 
 .tabs {
     display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
     gap: 15px;
     margin-bottom: 20px;
+    width: 100%;
 }
 
 .tab-btn {
@@ -34,6 +41,9 @@ h1 {
     cursor: pointer;
     box-shadow: 4px 4px 0px #FFA500;
     transition: all 0.1s ease-in-out;
+    flex: 1; 
+    min-width: 160px; 
+    max-width: 250px;
 }
 
 .tab-btn:active {
@@ -72,7 +82,7 @@ label {
 }
 
 input, select {
-    width: 95%;
+    width: 100%; 
     padding: 12px;
     border: 3px solid #87CEEB;
     border-radius: 15px;
@@ -112,9 +122,10 @@ input:focus, select:focus {
     border: 4px solid #FFD700;
     border-radius: 20px;
     padding: 15px;
-    margin-bottom: 15px;
+    margin-bottom: 25px; 
     text-align: left;
     position: relative;
+    margin-top: 15px;
 }
 
 .card-recurso h3 {
@@ -127,6 +138,7 @@ input:focus, select:focus {
 .card-recurso p {
     margin: 5px 0;
     line-height: 1.4;
+    word-break: break-word;
 }
 
 .gaveta-badge {
@@ -143,4 +155,31 @@ input:focus, select:focus {
 
 .hidden {
     display: none;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px; 
+    }
+
+    h1 {
+        font-size: 1.8em; 
+    }
+
+    .container {
+        padding: 20px 15px; 
+        border-width: 4px; 
+    }
+
+    .tab-btn {
+        width: 100%; 
+        max-width: 100%;
+    }
+
+    .gaveta-badge {
+       
+        position: static; 
+        display: inline-block;
+        margin-bottom: 10px;
+    }
 }
