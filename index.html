@@ -4,23 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Caixa de Matemática</title>
-    
-
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <h1> Minha Caixa de Matemática </h1>
+    <h1>Minha Caixa de Matemática</h1>
 
     <div class="tabs">
-        <button class="tab-btn active" id="btn-aba1" onclick="mudarAba('aba1')">Guardar Item</button>
+        <button class="tab-btn active" id="btn-aba1" onclick="mudarAba('aba1')">Guardar Recurso</button>
         <button class="tab-btn" id="btn-aba2" onclick="mudarAba('aba2')">Meus Recursos</button>
+        <button class="tab-btn" id="btn-aba3" onclick="mudarAba('aba3')">Criar Atividade</button>
+        <button class="tab-btn" id="btn-aba4" onclick="mudarAba('aba4')">Minhas Atividades</button>
     </div>
 
 
     <div id="aba1" class="container">
         <div class="form-group">
-            <label>Qual gaveta? </label>
+            <label>Qual gaveta?</label>
             <select id="gaveta">
                 <option>Jogos e brincadeiras matemáticas</option>
                 <option>Materiais e recursos manipuláveis</option>
@@ -33,40 +33,90 @@
         </div>
 
         <div class="form-group">
-            <label>Nome do recurso: </label>
-            <input type="text" id="nome" placeholder="Ex: Material Dourado">
+            <label>Nome do recurso/autor:</label>
+            <input type="text" id="nome" placeholder="Ex: Material Dourado / Constance Kamii">
         </div>
 
         <div class="form-group">
-            <label>Conceito Matemático: </label>
+            <label>Tipo de recurso:</label>
+            <input type="text" id="tipo" placeholder="Ex: Jogo físico, Livro, Aplicativo, Pesquisador...">
+        </div>
+
+        <div class="form-group">
+            <label>Conceito, conteúdo ou aprendizagem matemática:</label>
             <input type="text" id="conceito" placeholder="Ex: Sistema de Numeração Decimal">
         </div>
 
         <div class="form-group">
-            <label>Público Alvo: </label>
-            <input type="text" id="publico" placeholder="Ex: 1º ao 5º ano">
+            <label>Público ou faixa etária/ano:</label>
+            <input type="text" id="publico" placeholder="Ex: 1º ao 5º ano / Professores">
         </div>
 
         <div class="form-group">
-            <label>Uso Pedagógico: </label>
-            <input type="text" id="uso" placeholder="Ex: Ajuda a entender trocas e dezenas.">
+            <label>Como poderá ser utilizado pedagogicamente (ou contribuição do autor):</label>
+            <textarea id="uso" rows="3" placeholder="Ex: Ajuda a entender agrupamentos e trocas de dezenas..."></textarea>
         </div>
 
         <div class="form-group">
-            <label>Link ou Fonte: </label>
-            <input type="text" id="fonte" placeholder="Ex: Acervo da escola">
+            <label>Fonte, referência ou link de acesso:</label>
+            <input type="text" id="fonte" placeholder="Ex: Acervo da escola ou www.site.com">
         </div>
 
-        <button class="btn-salvar" onclick="salvarRecurso()"> Salvar na Caixinha! </button>
+        <button class="btn-salvar" onclick="salvarRecurso()">Salvar na Caixinha!</button>
     </div>
 
-
+    
     <div id="aba2" class="container hidden">
-        <div id="lista-recursos">
-     
-        </div>
+        <div id="lista-recursos"></div>
     </div>
 
+    <div id="aba3" class="container hidden">
+        <h2 style="color: #1E90FF; text-align: center; margin-top: 0; margin-bottom: 20px;">Nova Proposta de Atividade</h2>
+        
+        <div class="form-group">
+            <label>Título da atividade:</label>
+            <input type="text" id="atv-titulo" placeholder="Ex: Feirinha da Matemática">
+        </div>
+        <div class="form-group">
+            <label>Público Etapa:</label>
+            <input type="text" id="atv-publico" placeholder="Ex: 2º ano do Ensino Fundamental">
+        </div>
+        <div class="form-group">
+            <label>Objetivo de aprendizagem:</label>
+            <textarea id="atv-objetivo" rows="2" placeholder="O que se espera que os estudantes aprendam ou desenvolvam?"></textarea>
+        </div>
+        <div class="form-group">
+            <label>Conceito/conteúdo matemático:</label>
+            <input type="text" id="atv-conceito" placeholder="Ex: Adição, subtração e sistema monetário">
+        </div>
+        <div class="form-group">
+            <label>Material ou recurso (Escolhido da Caixa):</label>
+            <input type="text" id="atv-material" placeholder="Ex: Cédulas de dinheiro de brinquedo">
+        </div>
+        <div class="form-group">
+            <label>Desenvolvimento:</label>
+            <textarea id="atv-desenvolvimento" rows="4" placeholder="Como a atividade será organizada e realizada?"></textarea>
+        </div>
+        <div class="form-group">
+            <label>Mediação do professor:</label>
+            <textarea id="atv-mediacao" rows="3" placeholder="Perguntas, intervenções e apoios para o pensamento matemático..."></textarea>
+        </div>
+        <div class="form-group">
+            <label>Avaliação da aprendizagem:</label>
+            <textarea id="atv-avaliacao" rows="2" placeholder="Como você vai observar indícios de aprendizagem durante/após?"></textarea>
+        </div>
+        <div class="form-group">
+            <label>Justificativa da escolha:</label>
+            <textarea id="atv-justificativa" rows="2" placeholder="Por que esse recurso acrescenta à aprendizagem?"></textarea>
+        </div>
+
+        <button class="btn-salvar" onclick="salvarAtividade()" style="background-color: #FF8C00; border-color: #FF4500; box-shadow: 5px 5px 0px #FF4500;">Registrar Atividade!</button>
+    </div>
+
+    
+    <div id="aba4" class="container hidden">
+        <div id="lista-atividades"></div>
+    </div>
 
     <script src="script.js"></script>
 
