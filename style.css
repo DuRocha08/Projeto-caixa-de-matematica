@@ -3,7 +3,8 @@
 }
 
 body {
-    font-family: 'Comic Sans MS', 'Chalkboard SE', cursive, sans-serif;
+    
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #E0F7FA;
     color: #333;
     margin: 0;
@@ -15,9 +16,9 @@ body {
 
 h1 {
     color: #FF1493;
-    text-shadow: 3px 3px 0px #FFB6C1;
+    text-shadow: 2px 2px 0px #FFB6C1;
     font-size: 2.5em;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     text-align: center; 
 }
 
@@ -25,25 +26,25 @@ h1 {
     display: flex;
     flex-wrap: wrap; 
     justify-content: center;
-    gap: 15px;
-    margin-bottom: 20px;
+    gap: 12px;
+    margin-bottom: 25px;
     width: 100%;
+    max-width: 800px;
 }
 
 .tab-btn {
     background-color: #FFD700;
-    border: 4px solid #FFA500;
-    border-radius: 25px;
-    padding: 10px 20px;
-    font-size: 18px;
+    border: 3px solid #FFA500;
+    border-radius: 20px;
+    padding: 12px 15px;
+    font-size: 16px;
     font-family: inherit;
     font-weight: bold;
     cursor: pointer;
     box-shadow: 4px 4px 0px #FFA500;
     transition: all 0.1s ease-in-out;
     flex: 1; 
-    min-width: 160px; 
-    max-width: 250px;
+    min-width: 140px; 
 }
 
 .tab-btn:active {
@@ -60,38 +61,39 @@ h1 {
 
 .container {
     background-color: #FFFFFF;
-    border: 6px dashed #32CD32;
-    border-radius: 30px;
-    padding: 30px;
+    border: 4px dashed #32CD32;
+    border-radius: 25px;
+    padding: 35px;
     width: 100%;
-    max-width: 600px;
-    box-shadow: 8px 8px 0px #98FB98;
+    max-width: 700px;
+    box-shadow: 6px 6px 0px #98FB98;
 }
 
 .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 18px;
     text-align: left;
 }
 
 label {
     font-weight: bold;
     color: #1E90FF;
-    font-size: 1.1em;
+    font-size: 1.05em;
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 6px;
 }
 
-input, select {
+input, select, textarea {
     width: 100%; 
     padding: 12px;
-    border: 3px solid #87CEEB;
-    border-radius: 15px;
+    border: 2px solid #87CEEB;
+    border-radius: 12px;
     font-family: inherit;
     font-size: 1em;
     outline: none;
+    resize: vertical; 
 }
 
-input:focus, select:focus {
+input:focus, select:focus, textarea:focus {
     border-color: #FF69B4;
     background-color: #FFF0F5;
 }
@@ -99,10 +101,10 @@ input:focus, select:focus {
 .btn-salvar {
     background-color: #32CD32;
     color: white;
-    border: 4px solid #228B22;
-    border-radius: 25px;
+    border: 3px solid #228B22;
+    border-radius: 20px;
     padding: 15px 30px;
-    font-size: 20px;
+    font-size: 18px;
     font-family: inherit;
     font-weight: bold;
     cursor: pointer;
@@ -119,37 +121,38 @@ input:focus, select:focus {
 
 .card-recurso {
     background-color: #FFFACD;
-    border: 4px solid #FFD700;
-    border-radius: 20px;
-    padding: 15px;
+    border: 3px solid #FFD700;
+    border-radius: 15px;
+    padding: 22px;
     margin-bottom: 25px; 
     text-align: left;
     position: relative;
-    margin-top: 15px;
+    margin-top: 20px;
 }
 
 .card-recurso h3 {
-    margin: 0 0 10px 0;
+    margin: 0 0 12px 0;
     color: #FF4500;
     border-bottom: 2px dashed #FFD700;
-    padding-bottom: 5px;
+    padding-bottom: 8px;
 }
 
 .card-recurso p {
-    margin: 5px 0;
-    line-height: 1.4;
+    margin: 8px 0;
+    line-height: 1.5;
     word-break: break-word;
 }
 
 .gaveta-badge {
     background-color: #FF69B4;
     color: white;
-    padding: 5px 10px;
-    border-radius: 10px;
-    font-size: 0.8em;
+    padding: 6px 12px;
+    border-radius: 12px;
+    font-size: 0.85em;
+    font-weight: bold;
     position: absolute;
     top: -15px;
-    right: 10px;
+    right: 15px;
     border: 2px solid #C71585;
 }
 
@@ -168,18 +171,11 @@ input:focus, select:focus {
 
     .container {
         padding: 20px 15px; 
-        border-width: 4px; 
-    }
-
-    .tab-btn {
-        width: 100%; 
-        max-width: 100%;
     }
 
     .gaveta-badge {
-       
         position: static; 
         display: inline-block;
-        margin-bottom: 10px;
+        margin-bottom: 12px;
     }
 }
