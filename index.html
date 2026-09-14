@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caixa de Matemática</title>
+    
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1> Minha Caixa de Matemática </h1>
+
+    <div class="tabs">
+        <button class="tab-btn active" id="btn-aba1" onclick="mudarAba('aba1')">Guardar Item</button>
+        <button class="tab-btn" id="btn-aba2" onclick="mudarAba('aba2')">Meus Recursos</button>
+    </div>
+
+
+    <div id="aba1" class="container">
+        <div class="form-group">
+            <label>Qual gaveta? </label>
+            <select id="gaveta">
+                <option>Jogos e brincadeiras matemáticas</option>
+                <option>Materiais e recursos manipuláveis</option>
+                <option>Literatura e Matemática</option>
+                <option>Recursos digitais</option>
+                <option>Canais e conteúdos sobre Matemática</option>
+                <option>Autores que fundamentam o ensino da Matemática</option>
+                <option>Ideias que quero experimentar</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Nome do recurso: </label>
+            <input type="text" id="nome" placeholder="Ex: Material Dourado">
+        </div>
+
+        <div class="form-group">
+            <label>Conceito Matemático: </label>
+            <input type="text" id="conceito" placeholder="Ex: Sistema de Numeração Decimal">
+        </div>
+
+        <div class="form-group">
+            <label>Público Alvo: </label>
+            <input type="text" id="publico" placeholder="Ex: 1º ao 5º ano">
+        </div>
+
+        <div class="form-group">
+            <label>Uso Pedagógico: </label>
+            <input type="text" id="uso" placeholder="Ex: Ajuda a entender trocas e dezenas.">
+        </div>
+
+        <div class="form-group">
+            <label>Link ou Fonte: </label>
+            <input type="text" id="fonte" placeholder="Ex: Acervo da escola">
+        </div>
+
+        <button class="btn-salvar" onclick="salvarRecurso()">✨ Salvar na Caixinha! ✨</button>
+    </div>
+
+
+    <div id="aba2" class="container hidden">
+        <div id="lista-recursos">
+     
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

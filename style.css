@@ -1,0 +1,146 @@
+
+body {
+    font-family: 'Comic Sans MS', 'Chalkboard SE', cursive, sans-serif;
+    background-color: #E0F7FA;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    color: #FF1493;
+    text-shadow: 3px 3px 0px #FFB6C1;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.tabs {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.tab-btn {
+    background-color: #FFD700;
+    border: 4px solid #FFA500;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-family: inherit;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 4px 4px 0px #FFA500;
+    transition: all 0.1s ease-in-out;
+}
+
+.tab-btn:active {
+    transform: translate(4px, 4px);
+    box-shadow: 0px 0px 0px #FFA500;
+}
+
+.tab-btn.active {
+    background-color: #FFA500;
+    color: white;
+    border-color: #FF8C00;
+    box-shadow: 4px 4px 0px #FF8C00;
+}
+
+.container {
+    background-color: #FFFFFF;
+    border: 6px dashed #32CD32;
+    border-radius: 30px;
+    padding: 30px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 8px 8px 0px #98FB98;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    font-weight: bold;
+    color: #1E90FF;
+    font-size: 1.1em;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, select {
+    width: 95%;
+    padding: 12px;
+    border: 3px solid #87CEEB;
+    border-radius: 15px;
+    font-family: inherit;
+    font-size: 1em;
+    outline: none;
+}
+
+input:focus, select:focus {
+    border-color: #FF69B4;
+    background-color: #FFF0F5;
+}
+
+.btn-salvar {
+    background-color: #32CD32;
+    color: white;
+    border: 4px solid #228B22;
+    border-radius: 25px;
+    padding: 15px 30px;
+    font-size: 20px;
+    font-family: inherit;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 15px;
+    box-shadow: 5px 5px 0px #228B22;
+    transition: all 0.1s;
+}
+
+.btn-salvar:active {
+    transform: translate(5px, 5px);
+    box-shadow: 0px 0px 0px #228B22;
+}
+
+.card-recurso {
+    background-color: #FFFACD;
+    border: 4px solid #FFD700;
+    border-radius: 20px;
+    padding: 15px;
+    margin-bottom: 15px;
+    text-align: left;
+    position: relative;
+}
+
+.card-recurso h3 {
+    margin: 0 0 10px 0;
+    color: #FF4500;
+    border-bottom: 2px dashed #FFD700;
+    padding-bottom: 5px;
+}
+
+.card-recurso p {
+    margin: 5px 0;
+    line-height: 1.4;
+}
+
+.gaveta-badge {
+    background-color: #FF69B4;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 0.8em;
+    position: absolute;
+    top: -15px;
+    right: 10px;
+    border: 2px solid #C71585;
+}
+
+.hidden {
+    display: none;
+}
