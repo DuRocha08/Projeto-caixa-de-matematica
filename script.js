@@ -1,14 +1,12 @@
-// --- FUNÇÕES DE NAVEGAÇÃO E INICIALIZAÇÃO ---
 
-// Quando o usuário clica em uma Gaveta no menu
 function abrirFormularioGaveta(nomeGaveta) {
-    // Redireciona para a página do formulário que você criou (recurso.html)
+    
     window.location.href = 'recurso.html?gaveta=' + encodeURIComponent(nomeGaveta);
 }
 
-// Roda automaticamente quando qualquer página carrega
+
 window.onload = function() {
-    // 1. Verifica se estamos na página de formulário e pega a gaveta da URL
+   
     let elementoTitulo = document.getElementById('titulo-gaveta-selecionada');
     if (elementoTitulo) {
         const parametrosDaURL = new URLSearchParams(window.location.search);
@@ -22,18 +20,17 @@ window.onload = function() {
         }
     }
 
-    // 2. Verifica se estamos na página da Lista de Recursos
+   
     if (document.getElementById('lista-recursos')) {
         atualizarListaRecursos();
     }
 
-    // 3. Verifica se estamos na página da Lista de Atividades
+   
     if (document.getElementById('lista-atividades')) {
         atualizarListaAtividades();
     }
 };
 
-// --- FUNÇÕES DO BANCO DE DADOS ---
 
 async function salvarRecurso() {
     let gaveta = document.getElementById('gaveta').value; 
@@ -109,7 +106,8 @@ async function salvarAtividade() {
 
 async function atualizarListaRecursos() {
     let divLista = document.getElementById('lista-recursos');
-    divLista.innerHTML = "<h3 style='text-align: center; color: #1E90FF;'>Buscando materiais na nuvem... </h3>"; 
+   
+    divLista.innerHTML = "<h3 style='text-align: center; color: #8089D2;'>Buscando materiais na nuvem... </h3>"; 
 
     try {
         let resposta = await fetch('/api/recursos');
@@ -118,7 +116,8 @@ async function atualizarListaRecursos() {
         divLista.innerHTML = ""; 
 
         if (listaBanco.length === 0) {
-            divLista.innerHTML = "<h3 style='text-align: center; color: #999;'>A caixinha de todos está vazia...</h3>";
+           
+            divLista.innerHTML = "<h3 style='text-align: center; color: #2C3F70;'>A caixinha de todos está vazia...</h3>";
             return;
         }
 
@@ -139,13 +138,15 @@ async function atualizarListaRecursos() {
         }
     } catch (erro) {
         console.error(erro);
-        divLista.innerHTML = "<h3 style='text-align: center; color: red;'>Ops! Deu um problema ao puxar os dados.</h3>";
+        
+        divLista.innerHTML = "<h3 style='text-align: center; color: #A5231C;'>Ops! Deu um problema ao puxar os dados.</h3>";
     }
 }
 
 async function atualizarListaAtividades() {
     let divLista = document.getElementById('lista-atividades');
-    divLista.innerHTML = "<h3 style='text-align: center; color: #FF8C00;'>Buscando atividades na nuvem... </h3>"; 
+   
+    divLista.innerHTML = "<h3 style='text-align: center; color: #8089D2;'>Buscando atividades na nuvem... </h3>"; 
 
     try {
         let resposta = await fetch('/api/atividades');
@@ -154,15 +155,17 @@ async function atualizarListaAtividades() {
         divLista.innerHTML = ""; 
 
         if (listaBanco.length === 0) {
-            divLista.innerHTML = "<h3 style='text-align: center; color: #999;'>Nenhuma atividade na sala ainda...</h3>";
+           
+            divLista.innerHTML = "<h3 style='text-align: center; color: #2C3F70;'>Nenhuma atividade na sala ainda...</h3>";
             return;
         }
 
         for (let i = 0; i < listaBanco.length; i++) {
             let item = listaBanco[i];
+            
             let cartaoHTML = `
-                <div class="card-recurso" style="border-color: #FF8C00; background-color: #FFF5EE;">
-                    <h3 style="color: #FF8C00; border-bottom-color: #FF8C00;">${item.titulo}</h3>
+                <div class="card-recurso" style="border-color: #8089D2; background-color: #FFFFFF;">
+                    <h3 style="color: #A5231C; border-bottom-color: #8089D2;">${item.titulo}</h3>
                     <p><strong>Público Etapa:</strong> ${item.publico}</p>
                     <p><strong>Objetivo:</strong> ${item.objetivo}</p>
                     <p><strong>Conceito:</strong> ${item.conceito}</p>
@@ -177,6 +180,7 @@ async function atualizarListaAtividades() {
         }
     } catch (erro) {
         console.error(erro);
-        divLista.innerHTML = "<h3 style='text-align: center; color: red;'>Ops! Deu um problema ao puxar as atividades.</h3>";
+       
+        divLista.innerHTML = "<h3 style='text-align: center; color: #A5231C;'>Ops! Deu um problema ao puxar as atividades.</h3>";
     }
 }
