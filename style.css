@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap');
 
 * {
@@ -7,10 +6,10 @@
 }
 
 body {
-  
-    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+    
+    background: linear-gradient(135deg, #E8EBED 0%, #C8D4E5 100%);
     background-attachment: fixed;
-    color: #444;
+    color: #2C3F70; 
     margin: 0;
     padding: 20px;
     display: flex;
@@ -20,8 +19,8 @@ body {
 }
 
 h1 {
-    color: #ff5252;
-    text-shadow: 3px 3px 0px #ffd32a; 
+    color: #A5231C; 
+    text-shadow: 3px 3px 0px #FFFFFF;
     font-size: 3em;
     margin-bottom: 10px;
     text-align: center; 
@@ -31,22 +30,21 @@ h1 {
 h2 {
     font-size: 2em;
     margin-top: 0;
+    color: #2C3F70;
 }
 
 
 .container {
     background-color: #FFFFFF;
-    border: 5px solid #4ecdc4;
-    border-radius: 35px; 
+    border: 5px solid #8089D2; 
+    border-radius: 35px;
     padding: 40px;
     width: 100%;
     max-width: 800px;
-
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 10px 30px rgba(44, 63, 112, 0.15); 
     position: relative;
     margin-bottom: 30px;
 }
-
 
 .hidden {
     display: none !important;
@@ -59,7 +57,7 @@ button {
 }
 
 .btn-destaque {
-    background-color: #ff5252;
+    background-color: #A5231C; 
     color: white;
     border: none;
     border-radius: 50px;
@@ -67,14 +65,13 @@ button {
     font-size: 26px;
     font-weight: 700;
     cursor: pointer;
-   
-    box-shadow: 0px 8px 0px #b33939;
+    box-shadow: 0px 8px 0px #7A1A14;
     transition: all 0.1s ease-in-out;
 }
 
 .btn-destaque:active {
-    transform: translateY(8px); 
-    box-shadow: 0px 0px 0px #b33939;
+    transform: translateY(8px);
+    box-shadow: 0px 0px 0px #7A1A14;
 }
 
 
@@ -86,27 +83,28 @@ button {
 }
 
 .btn-gaveta {
-    background-color: #fff200;
-    color: #333;
-    border: 4px solid #f39c12;
+    background-color: #C8D4E5; 
+    color: #2C3F70;
+    border: 4px solid #8089D2; 
     border-radius: 20px;
     padding: 20px 15px;
     font-size: 18px;
     font-weight: 600;
     cursor: pointer;
-    box-shadow: 0px 6px 0px #f39c12;
+    box-shadow: 0px 6px 0px #8089D2; 
     transition: all 0.1s ease-in-out;
 }
 
 .btn-gaveta:hover {
-    background-color: #fffa65;
-    transform: translateY(-3px); 
+    background-color: #E8EBED; 
+    transform: translateY(-3px);
 }
 
 .btn-gaveta:active {
     transform: translateY(6px);
-    box-shadow: 0px 0px 0px #f39c12;
+    box-shadow: 0px 0px 0px #8089D2;
 }
+
 
 .grid-opcoes {
     display: flex;
@@ -117,28 +115,27 @@ button {
 }
 
 .tab-btn {
-    background-color: #32ff7e;
-    color: #2c3e50;
-    border: 3px solid #3ae374;
+    background-color: #8089D2; 
+    color: #FFFFFF;
+    border: 3px solid #2C3F70; 
     border-radius: 25px;
     padding: 15px 25px;
     font-size: 17px;
     font-weight: 700;
     cursor: pointer;
-    box-shadow: 0px 5px 0px #17c0eb;
+    box-shadow: 0px 5px 0px #2C3F70;
     transition: all 0.1s;
-    border-color: #17c0eb;
 }
 
 .tab-btn:active {
     transform: translateY(5px);
-    box-shadow: 0px 0px 0px #17c0eb;
+    box-shadow: 0px 0px 0px #2C3F70;
 }
 
 .btn-voltar {
-    background-color: #f1f2f6;
-    color: #57606f;
-    border: 3px solid #dfe4ea;
+    background-color: #E8EBED; 
+    color: #2C3F70; 
+    border: 3px solid #C8D4E5;
     border-radius: 15px;
     padding: 10px 20px;
     font-size: 16px;
@@ -150,7 +147,7 @@ button {
 }
 
 .btn-voltar:hover {
-    background-color: #dfe4ea;
+    background-color: #FFFFFF;
 }
 
 
@@ -161,7 +158,7 @@ button {
 
 label {
     font-weight: 600;
-    color: #341f97;
+    color: #2C3F70;
     font-size: 1.2em;
     display: block;
     margin-bottom: 8px;
@@ -171,31 +168,30 @@ label {
 input, select, textarea {
     width: 100%; 
     padding: 15px;
-    border: 3px solid #c8d6e5;
+    border: 3px solid #C8D4E5;
     border-radius: 18px;
-    background-color: #f8fcfd;
+    background-color: #FFFFFF;
     font-size: 1.1em;
-    color: #222;
+    color: #2C3F70;
     outline: none;
     transition: all 0.3s;
     resize: vertical; 
 }
 
 input:focus, select:focus, textarea:focus {
-    border-color: #ff9ff3;
-    background-color: #ffffff;
-    box-shadow: 0px 0px 10px rgba(255, 159, 243, 0.4);
+    border-color: #8089D2;
+    box-shadow: 0px 0px 10px rgba(128, 137, 210, 0.4);
 }
 
 ::placeholder {
-    color: #a4b0be;
-    opacity: 1;
+    color: #8089D2;
+    opacity: 0.7;
 }
 
 
 .btn-salvar {
-    background-color: #ff9ff3;
-    color: #fff;
+    background-color: #2C3F70;
+    color: #FFFFFF;
     border: none;
     border-radius: 30px;
     padding: 18px 30px;
@@ -204,36 +200,37 @@ input:focus, select:focus, textarea:focus {
     cursor: pointer;
     width: 100%;
     margin-top: 20px;
-    box-shadow: 0px 6px 0px #f368e0;
+    box-shadow: 0px 6px 0px #1B2745; 
     transition: all 0.1s;
 }
 
 .btn-salvar:active {
     transform: translateY(6px);
-    box-shadow: 0px 0px 0px #f368e0;
+    box-shadow: 0px 0px 0px #1B2745;
 }
 
+
 .card-recurso {
-    background-color: #fff;
-    border: 4px solid #ffcccc;
+    background-color: #E8EBED; 
+    border: 4px solid #C8D4E5; 
     border-radius: 25px;
     padding: 25px;
     margin-bottom: 30px; 
     text-align: left;
     position: relative;
     margin-top: 35px;
-    box-shadow: 4px 4px 0px #ffcccc;
+    box-shadow: 4px 4px 0px #C8D4E5;
     transition: transform 0.2s;
 }
 
 .card-recurso:hover {
-    transform: rotate(1deg) scale(1.02); 
+    transform: rotate(1deg) scale(1.02);
 }
 
 .card-recurso h3 {
     margin: 0 0 15px 0;
-    color: #ff5252;
-    border-bottom: 3px dotted #ffb8b8;
+    color: #A5231C;
+    border-bottom: 3px dotted #C8D4E5;
     padding-bottom: 10px;
     font-size: 1.5em;
 }
@@ -246,11 +243,12 @@ input:focus, select:focus, textarea:focus {
 }
 
 .card-recurso strong {
-    color: #341f97;
+    color: #2C3F70; 
 }
 
+
 .gaveta-badge {
-    background-color: #1dd1a1;
+    background-color: #8089D2; 
     color: white;
     padding: 8px 16px;
     border-radius: 20px;
@@ -259,8 +257,8 @@ input:focus, select:focus, textarea:focus {
     position: absolute;
     top: -20px;
     right: 20px;
-    border: 3px solid #10ac84;
-    box-shadow: 2px 2px 0px #10ac84;
+    border: 3px solid #2C3F70; 
+    box-shadow: 2px 2px 0px #2C3F70;
 }
 
 
