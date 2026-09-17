@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guardar Recurso - Caixa de Matemática</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container tela">
+        <button class="btn-voltar" onclick="window.location.href='gavetas.html'">⬅ Voltar às Gavetas</button>
+        
+        <h2 id="titulo-gaveta-selecionada" style="color: #FF1493; text-align: center;">Carregando gaveta...</h2>
+        <input type="hidden" id="gaveta">
+
+        <div class="form-group">
+            <label>Nome do recurso/autor:</label>
+            <input type="text" id="nome" placeholder="Ex: Material Dourado / Constance Kamii">
+        </div>
+        <div class="form-group">
+            <label>Tipo de recurso:</label>
+            <input type="text" id="tipo" placeholder="Ex: Jogo físico, Livro, Aplicativo, Pesquisador...">
+        </div>
+        <div class="form-group">
+            <label>Conceito, conteúdo ou aprendizagem matemática:</label>
+            <input type="text" id="conceito" placeholder="Ex: Sistema de Numeração Decimal">
+        </div>
+        <div class="form-group">
+            <label>Público ou faixa etária/ano:</label>
+            <input type="text" id="publico" placeholder="Ex: 1º ao 5º ano / Professores">
+        </div>
+        <div class="form-group">
+            <label>Como poderá ser utilizado pedagogicamente:</label>
+            <textarea id="uso" rows="3" placeholder="Ex: Ajuda a entender agrupamentos e trocas de dezenas..."></textarea>
+        </div>
+        <div class="form-group">
+            <label>Fonte, referência ou link de acesso:</label>
+            <input type="text" id="fonte" placeholder="Ex: Acervo da escola ou www.site.com">
+        </div>
+
+        <button class="btn-salvar" onclick="salvarRecurso()">Salvar na Caixinha!</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

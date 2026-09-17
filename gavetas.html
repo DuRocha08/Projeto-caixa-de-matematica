@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Caixa de Matemática</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container tela">
+        <h2 style="text-align: center; color: #1E90FF;">Em qual gaveta vamos guardar?</h2>
+        
+        <div class="grid-gavetas">
+            <button class="btn-gaveta" onclick="abrirFormularioGaveta('Jogos e brincadeiras matemáticas')">🎲 Jogos e brincadeiras</button>
+            <button class="btn-gaveta" onclick="abrirFormularioGaveta('Materiais e recursos manipuláveis')">🧱 Materiais manipuláveis</button>
+            <button class="btn-gaveta" onclick="abrirFormularioGaveta('Literatura e Matemática')">📚 Literatura</button>
+            <button class="btn-gaveta" onclick="abrirFormularioGaveta('Recursos digitais')">💻 Recursos digitais</button>
+            <button class="btn-gaveta" onclick="abrirFormularioGaveta('Canais e conteúdos sobre Matemática')">📺 Canais e conteúdos</button>
+            <button class="btn-gaveta" onclick="abrirFormularioGaveta('Autores que fundamentam o ensino')">✍️ Autores e Teóricos</button>
+            <button class="btn-gaveta" onclick="abrirFormularioGaveta('Ideias que quero experimentar')">💡 Ideias Novas</button>
+        </div>
+
+        <hr style="border: 2px dashed #87CEEB; margin: 30px 0;">
+
+        <h2 style="text-align: center; color: #FF8C00;">O que mais deseja fazer?</h2>
+        <div class="grid-opcoes">
+            <button class="tab-btn" onclick="window.location.href='lista recursos.html'">Ver Todos os Recursos</button>
+            <button class="tab-btn" onclick="window.location.href='atividade.html'">Criar Atividade</button>
+            <button class="tab-btn" onclick="window.location.href='lista de atividades.html'">Ver Atividades</button>
+        </div>
+        </div>
+        <button class="btn-voltar" onclick="window.location.href='index.html'">⬅ Voltar ao Início</button>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
