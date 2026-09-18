@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap');
+
+ {
+    box-sizing: border-box;
+    font-family: 'Fredoka', cursive, sans-serif !important;
+}
 * {
     box-sizing: border-box;
 }
