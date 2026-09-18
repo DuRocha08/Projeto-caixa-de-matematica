@@ -202,3 +202,38 @@ header a:hover {
         margin-bottom: 12px;
     }
 }
+button, .tab-btn, .btn-salvar, input[type="submit"] {
+    background-color: #C8D4E5 !important; /* Buttercream */
+    color: #2C3F70 !important; /* Blueberry */
+    border: 3px solid #8089D2 !important; /* Violet */
+    border-radius: 20px !important;
+    padding: 12px 18px !important;
+    font-size: 16px !important;
+    font-family: 'Fredoka', sans-serif !important;
+    font-weight: bold !important;
+    cursor: pointer !important;
+    box-shadow: 4px 4px 0px #8089D2 !important;
+    transition: all 0.1s ease-in-out !important;
+    display: inline-block;
+    margin: 6px;
+}
+
+button:hover, .tab-btn:hover, .btn-salvar:hover {
+    background-color: #8089D2 !important; /* Violet */
+    color: white !important;
+    border-color: #2C3F70 !important;
+    box-shadow: 4px 4px 0px #2C3F70 !important;
+}
+
+button:active, .tab-btn:active, .btn-salvar:active {
+    transform: translate(4px, 4px) !important;
+    box-shadow: 0px 0px 0px #8089D2 !important;
+}
+
+/* O botão ativo ou principal ganha destaque em Strawberry (Vermelho) */
+.tab-btn.active, button.btn-principal {
+    background-color: #A5231C !important; /* Strawberry */
+    color: white !important;
+    border-color: #701612 !important;
+    box-shadow: 4px 4px 0px #701612 !important;
+}
