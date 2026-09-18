@@ -1,224 +1,204 @@
-/* ==========================================
-   PALETA DE CORES "CAIXA DE MATEMÁTICA"
-   ================================---------- */
-:root {
-    --blueberry: #2C3F70;
-    --strawberry: #A5231C;
-    --buttercream: #C8D4E5;
-    --violet: #8089D2;
-    --meringe: #E8EBED;
+* {
+    box-sizing: border-box;
 }
 
-/* ==========================================
-   ESTILOS GLOBAIS & INFANTIS / LÚDICOS
-   ================================---------- */
 body {
-    font-family: 'Fredoka', sans-serif;
-    background-color: var(--meringe);
-    color: var(--blueberry);
+    font-family: 'Fredoka', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #E8EBED; /* Meringe */
+    color: #2C3F70; /* Blueberry */
     margin: 0;
-    padding: 0;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
 }
 
-/* ==========================================
-   CABEÇALHO (HEADER)
-   ================================---------- */
-header {
-    background-color: var(--blueberry);
-    color: white;
-    width: 100%;
-    text-align: center;
-    padding: 30px 20px;
-    border-bottom: 8px solid var(--violet);
-    box-shadow: 0 6px 15px rgba(44, 63, 112, 0.2);
-    box-sizing: border-box;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 2.8rem;
-    color: var(--buttercream);
-    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.15);
-}
-
-header p {
-    margin-top: 10px;
-    font-size: 1.2rem;
-    color: #ffffff;
-    font-weight: 400;
-}
-
-/* Links do Cabeçalho / Navegação */
-header a {
-    color: var(--buttercream);
-    text-decoration: none;
-    font-weight: 600;
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 6px 14px;
-    border-radius: 20px;
-    transition: all 0.2s ease;
-    display: inline-block;
-    margin: 5px;
-}
-
-header a:hover {
-    background-color: var(--violet);
-    color: white;
-    transform: translateY(-2px);
-}
-
-/* ==========================================
-   CONTEÚDO PRINCIPAL (MAIN)
-   ================================---------- */
-main {
-    width: 90%;
-    max-width: 850px;
-    margin: 40px auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-sizing: border-box;
+h1 {
+    color: #A5231C; /* Strawberry */
+    text-shadow: 2px 2px 0px #C8D4E5; /* Buttercream */
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center; 
 }
 
 h2 {
-    color: var(--strawberry);
+    color: #A5231C;
     text-align: center;
-    font-size: 2rem;
-    margin-bottom: 25px;
-    text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.6);
 }
 
-/* ==========================================
-   CONTAINERS E CARTÕES (ESTILO LÚDICO)
-   ================================---------- */
-.card-cadastro, .todas-atividades, .bloco-conteudo {
-    background-color: white;
-    width: 100%;
-    padding: 35px;
-    border-radius: 25px;
-    border: 5px solid var(--buttercream);
-    box-shadow: 0 10px 25px rgba(44, 63, 112, 0.08);
-    box-sizing: border-box;
-    margin-bottom: 35px;
-}
-
-/* ==========================================
-   FORMULÁRIOS E INPUTS
-   ================================---------- */
-form {
+.tabs {
     display: flex;
-    flex-direction: column;
-    gap: 18px;
-}
-
-input, textarea, select {
-    font-family: 'Fredoka', sans-serif;
-    padding: 15px 18px;
-    border: 3px solid var(--buttercream);
-    border-radius: 16px;
-    font-size: 1.05rem;
-    color: var(--blueberry);
-    outline: none;
+    flex-wrap: wrap; 
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 25px;
     width: 100%;
-    box-sizing: border-box;
-    background-color: #fafbfc;
-    transition: all 0.2s ease;
+    max-width: 800px;
 }
 
-input:focus, textarea:focus, select:focus {
-    border-color: var(--violet);
-    background-color: white;
-    box-shadow: 0 0 0 4px rgba(128, 137, 210, 0.2);
-}
-
-textarea {
-    resize: vertical;
-    min-height: 100px;
-}
-
-/* ==========================================
-   BOTÕES COM EFEITO DIVERTIDO
-   ================================---------- */
-button, .btn-ludico {
-    font-family: 'Fredoka', sans-serif;
-    background-color: var(--strawberry);
-    color: white;
-    font-size: 1.2rem;
-    padding: 16px;
-    border: none;
-    border-radius: 16px;
-    cursor: pointer;
-    font-weight: 600;
-    box-shadow: 0 6px 0px #701612; /* Efeito 3D lúdico */
-    transition: all 0.1s ease;
-    margin-top: 10px;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-button:hover {
-    background-color: #b82720;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 0px #701612;
-}
-
-button:active {
-    transform: translateY(4px);
-    box-shadow: 0 2px 0px #701612;
-}
-
-/* ==========================================
-   GRID E CARDS DE ATIVIDADES / RECURSOS
-   ================================---------- */
-.grid-atividades {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 25px;
-    width: 100%;
-}
-
-.atividade-card, .recurso-card {
-    background-color: #ffffff;
+.tab-btn {
+    background-color: #C8D4E5; /* Buttercream */
+    border: 3px solid #8089D2; /* Violet */
     border-radius: 20px;
-    border-top: 8px solid var(--violet);
-    border-left: 3px solid var(--buttercream);
-    border-right: 3px solid var(--buttercream);
-    border-bottom: 3px solid var(--buttercream);
-    padding: 25px;
-    box-shadow: 0 8px 20px rgba(44, 63, 112, 0.06);
-    box-sizing: border-box;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    padding: 12px 15px;
+    font-size: 16px;
+    font-family: inherit;
+    font-weight: bold;
+    cursor: pointer;
+    color: #2C3F70;
+    box-shadow: 4px 4px 0px #8089D2;
+    transition: all 0.1s ease-in-out;
+    flex: 1; 
+    min-width: 140px; 
 }
 
-.atividade-card:hover, .recurso-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 25px rgba(44, 63, 112, 0.12);
+.tab-btn:active {
+    transform: translate(4px, 4px);
+    box-shadow: 0px 0px 0px #8089D2;
 }
 
-.atividade-card h3, .recurso-card h3 {
-    color: var(--blueberry);
-    margin-top: 0;
-    font-size: 1.4rem;
+.tab-btn.active {
+    background-color: #8089D2; /* Violet */
+    color: white;
+    border-color: #2C3F70;
+    box-shadow: 4px 4px 0px #2C3F70;
 }
 
-.autor-tag {
-    display: inline-block;
-    background-color: var(--buttercream);
-    color: var(--blueberry);
-    padding: 6px 14px;
+.container, .card-cadastro, .todas-atividades {
+    background-color: #FFFFFF;
+    border: 4px dashed #8089D2; /* Violet */
+    border-radius: 25px;
+    padding: 35px;
+    width: 100%;
+    max-width: 700px;
+    box-shadow: 6px 6px 0px #C8D4E5; /* Buttercream */
+    margin-bottom: 25px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+    text-align: left;
+}
+
+label {
+    font-weight: bold;
+    color: #2C3F70; /* Blueberry */
+    font-size: 1.05em;
+    display: block;
+    margin-bottom: 6px;
+}
+
+input, select, textarea {
+    width: 100%; 
+    padding: 12px;
+    border: 2px solid #C8D4E5;
     border-radius: 12px;
-    font-size: 0.9rem;
-    font-weight: 600;
-    margin-bottom: 15px;
+    font-family: inherit;
+    font-size: 1em;
+    outline: none;
+    color: #2C3F70;
+    background-color: #fafbfc;
+    resize: vertical;
 }
 
-.info-p {
-    font-size: 1rem;
+input:focus, select:focus, textarea:focus {
+    border-color: #A5231C; /* Strawberry */
+    background-color: #FFF0F1;
+}
+
+.btn-salvar, button[type="submit"] {
+    background-color: #A5231C; /* Strawberry */
+    color: white;
+    border: 3px solid #701612;
+    border-radius: 20px;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-family: inherit;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 15px;
+    box-shadow: 5px 5px 0px #701612;
+    transition: all 0.1s;
+}
+
+.btn-salvar:active, button[type="submit"]:active {
+    transform: translate(5px, 5px);
+    box-shadow: 0px 0px 0px #701612;
+}
+
+.card-recurso, .atividade-card {
+    background-color: #FFFDE6;
+    border: 3px solid #8089D2;
+    border-radius: 15px;
+    padding: 22px;
+    margin-bottom: 25px; 
+    text-align: left;
+    position: relative;
+    margin-top: 20px;
+    box-shadow: 4px 4px 0px #C8D4E5;
+}
+
+.card-recurso h3, .atividade-card h3 {
+    margin: 0 0 12px 0;
+    color: #A5231C; /* Strawberry */
+    border-bottom: 2px dashed #8089D2;
+    padding-bottom: 8px;
+}
+
+.card-recurso p, .atividade-card p, .info-p {
+    margin: 8px 0;
     line-height: 1.5;
-    margin: 10px 0;
-    color: #3b4d7c;
+    word-break: break-word;
+    color: #2C3F70;
+}
+
+.gaveta-badge, .autor-tag {
+    background-color: #8089D2; /* Violet */
+    color: white;
+    padding: 6px 12px;
+    border-radius: 12px;
+    font-size: 0.85em;
+    font-weight: bold;
+    position: absolute;
+    top: -15px;
+    right: 15px;
+    border: 2px solid #2C3F70;
+    display: inline-block;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Links globais de navegação se houver no header */
+header a {
+    color: #C8D4E5;
+    text-decoration: none;
+    font-weight: bold;
+}
+header a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px; 
+    }
+
+    h1 {
+        font-size: 1.8em; 
+    }
+
+    .container, .card-cadastro, .todas-atividades {
+        padding: 20px 15px; 
+    }
+
+    .gaveta-badge, .autor-tag {
+        position: static; 
+        display: inline-block;
+        margin-bottom: 12px;
+    }
 }
