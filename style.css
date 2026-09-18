@@ -1,4 +1,6 @@
-
+/* ==========================================
+   PALETA DE CORES "CAIXA DE MATEMÁTICA"
+   ================================---------- */
 :root {
     --blueberry: #2C3F70;
     --strawberry: #A5231C;
@@ -7,6 +9,9 @@
     --meringe: #E8EBED;
 }
 
+/* ==========================================
+   ESTILOS GLOBAIS & INFANTIS / LÚDICOS
+   ================================---------- */
 body {
     font-family: 'Fredoka', sans-serif;
     background-color: var(--meringe);
@@ -19,149 +24,201 @@ body {
     min-height: 100vh;
 }
 
+/* ==========================================
+   CABEÇALHO (HEADER)
+   ================================---------- */
 header {
     background-color: var(--blueberry);
     color: white;
     width: 100%;
     text-align: center;
-    padding: 25px 0;
+    padding: 30px 20px;
     border-bottom: 8px solid var(--violet);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 6px 15px rgba(44, 63, 112, 0.2);
+    box-sizing: border-box;
 }
 
 header h1 {
     margin: 0;
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     color: var(--buttercream);
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.15);
 }
 
 header p {
-    margin-top: 8px;
-    font-size: 1.1rem;
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #ffffff;
+    font-weight: 400;
 }
 
+/* Links do Cabeçalho / Navegação */
 header a {
     color: var(--buttercream);
     text-decoration: none;
     font-weight: 600;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 6px 14px;
+    border-radius: 20px;
+    transition: all 0.2s ease;
+    display: inline-block;
+    margin: 5px;
 }
 
 header a:hover {
-    text-decoration: underline;
+    background-color: var(--violet);
+    color: white;
+    transform: translateY(-2px);
 }
 
+/* ==========================================
+   CONTEÚDO PRINCIPAL (MAIN)
+   ================================---------- */
 main {
     width: 90%;
-    max-width: 800px;
-    margin: 30px auto;
+    max-width: 850px;
+    margin: 40px auto;
     display: flex;
     flex-direction: column;
     align-items: center;
+    box-sizing: border-box;
 }
 
 h2 {
     color: var(--strawberry);
     text-align: center;
+    font-size: 2rem;
+    margin-bottom: 25px;
+    text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.6);
 }
 
-/* Caixa de Conteúdo Padronizada */
-.card-cadastro, .todas-atividades {
+/* ==========================================
+   CONTAINERS E CARTÕES (ESTILO LÚDICO)
+   ================================---------- */
+.card-cadastro, .todas-atividades, .bloco-conteudo {
     background-color: white;
     width: 100%;
-    padding: 30px;
-    border-radius: 20px;
-    border: 4px solid var(--buttercream);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+    padding: 35px;
+    border-radius: 25px;
+    border: 5px solid var(--buttercream);
+    box-shadow: 0 10px 25px rgba(44, 63, 112, 0.08);
     box-sizing: border-box;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
 }
 
+/* ==========================================
+   FORMULÁRIOS E INPUTS
+   ================================---------- */
 form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 18px;
 }
 
-input, textarea {
+input, textarea, select {
     font-family: 'Fredoka', sans-serif;
-    padding: 12px 15px;
-    border: 2px solid var(--buttercream);
-    border-radius: 10px;
-    font-size: 1rem;
+    padding: 15px 18px;
+    border: 3px solid var(--buttercream);
+    border-radius: 16px;
+    font-size: 1.05rem;
     color: var(--blueberry);
     outline: none;
     width: 100%;
     box-sizing: border-box;
-    background-color: #fafbfd;
+    background-color: #fafbfc;
+    transition: all 0.2s ease;
 }
 
-input:focus, textarea:focus {
+input:focus, textarea:focus, select:focus {
     border-color: var(--violet);
     background-color: white;
+    box-shadow: 0 0 0 4px rgba(128, 137, 210, 0.2);
 }
 
 textarea {
     resize: vertical;
-    min-height: 80px;
+    min-height: 100px;
 }
 
-button {
+/* ==========================================
+   BOTÕES COM EFEITO DIVERTIDO
+   ================================---------- */
+button, .btn-ludico {
     font-family: 'Fredoka', sans-serif;
     background-color: var(--strawberry);
     color: white;
-    font-size: 1.1rem;
-    padding: 14px;
+    font-size: 1.2rem;
+    padding: 16px;
     border: none;
-    border-radius: 12px;
+    border-radius: 16px;
     cursor: pointer;
     font-weight: 600;
-    transition: background-color 0.2s, transform 0.1s;
-    margin-top: 5px;
+    box-shadow: 0 6px 0px #701612; /* Efeito 3D lúdico */
+    transition: all 0.1s ease;
+    margin-top: 10px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 button:hover {
-    background-color: #8b1d17;
-    transform: scale(1.01);
+    background-color: #b82720;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 0px #701612;
 }
 
+button:active {
+    transform: translateY(4px);
+    box-shadow: 0 2px 0px #701612;
+}
+
+/* ==========================================
+   GRID E CARDS DE ATIVIDADES / RECURSOS
+   ================================---------- */
 .grid-atividades {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
     width: 100%;
-    margin-top: 20px;
 }
 
-.atividade-card {
-    background-color: #fafbfc;
-    border-radius: 15px;
-    border-top: 6px solid var(--violet);
-    padding: 20px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+.atividade-card, .recurso-card {
+    background-color: #ffffff;
+    border-radius: 20px;
+    border-top: 8px solid var(--violet);
+    border-left: 3px solid var(--buttercream);
+    border-right: 3px solid var(--buttercream);
+    border-bottom: 3px solid var(--buttercream);
+    padding: 25px;
+    box-shadow: 0 8px 20px rgba(44, 63, 112, 0.06);
     box-sizing: border-box;
-    border-left: 2px solid var(--buttercream);
-    border-right: 2px solid var(--buttercream);
-    border-bottom: 2px solid var(--buttercream);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.atividade-card h3 {
+.atividade-card:hover, .recurso-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(44, 63, 112, 0.12);
+}
+
+.atividade-card h3, .recurso-card h3 {
     color: var(--blueberry);
     margin-top: 0;
+    font-size: 1.4rem;
 }
 
 .autor-tag {
     display: inline-block;
     background-color: var(--buttercream);
     color: var(--blueberry);
-    padding: 4px 10px;
-    border-radius: 8px;
-    font-size: 0.8rem;
+    padding: 6px 14px;
+    border-radius: 12px;
+    font-size: 0.9rem;
     font-weight: 600;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .info-p {
-    font-size: 0.95rem;
-    line-height: 1.4;
-    margin: 6px 0;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 10px 0;
+    color: #3b4d7c;
 }
