@@ -3,21 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todas as Atividades - Caixa de Matemática</title>
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
+    <title>Minhas Atividades - Caixa de Matemática</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Todas as Atividades </h1>
-        <p><a href="index.html" style="color: var(--meringe); text-decoration: none;">Voltar ao Início</a> | <a href="atividade.html" style="color: var(--meringe); text-decoration: none;">➕ Criar Nova</a></p>
-    </header>
-    <main>
-        <section class="todas-atividades">
-            <div id="lista-atividades" class="grid-atividades">
-            </div>
-        </section>
-    </main>
+    <div class="container tela">
+        <button class="btn-voltar" onclick="window.location.href='gavetas.html'">⬅ Voltar ao Menu</button>
+        <h2 style="text-align: center;">Atividades da Turma</h2>
+        <div id="lista-atividades"></div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
