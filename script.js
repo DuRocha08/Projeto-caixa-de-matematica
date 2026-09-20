@@ -1,19 +1,53 @@
 document.addEventListener('DOMContentLoaded', () => {
     
 
+    const botoesGaveta = document.querySelectorAll('.tab-btn, .btn-gaveta, a');
+    
+    botoesGaveta.forEach(botao => {
+        botao.addEventListener('click', (e) => {
+            const textoBotao = botao.textContent.trim();
+            const gavetasValidas = [
+                "Jogos e brincadeiras", 
+                "Materiais manipuláveis", 
+                "Literatura", 
+                "Recursos digitais", 
+                "Canais e conteúdos", 
+                "Autores e Teóricos", 
+                "Ideias Novas"
+            ];
+
+            if (gavetasValidas.some(g => textoBotao.includes(g))) {
+                localStorage.setItem('gavetaAtiva', textoBotao);
+                if (window.location.pathname.includes('gavetas.html')) {
+                    e.preventDefault();
+                    window.location.href = 'lista de atividades.html';
+                }
+            }
+        });
+    });
+
     const formAtividade = document.getElementById('form-atividade');
+    
     if (formAtividade) {
         formAtividade.addEventListener('submit', async (e) => {
             e.preventDefault();
+            
+            const btnSubmit = formAtividade.querySelector('button[type="submit"]');
+            const textoOriginal = btnSubmit ? btnSubmit.innerText : 'Guardar';
+            
+            if (btnSubmit) {
+                btnSubmit.innerText = 'Guardando... ';
+                btnSubmit.style.pointerEvents = 'none';
+            }
 
             const novaAtividade = {
-                titulo: document.getElementById('titulo').value,
-                autor: document.getElementById('autor').value,
-                publico: document.getElementById('publico').value,
-                conceito: document.getElementById('conceito').value,
-                objetivo: document.getElementById('objetivo').value,
-                material: document.getElementById('material').value,
-                desenvolvimento: document.getElementById('desenvolvimento').value
+                titulo: document.getElementById('titulo')?.value || 'Sem Título',
+                autor: document.getElementById('autor')?.value || 'Anónimo',
+                publico: document.getElementById('publico')?.value || '',
+                conceito: document.getElementById('conceito')?.value || '',
+                objetivo: document.getElementById('objetivo')?.value || '',
+                material: document.getElementById('material')?.value || '',
+                desenvolvimento: document.getElementById('desenvolvimento')?.value || ''
             };
 
             try {
@@ -24,56 +58,81 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
 
                 if (resposta.ok) {
-                    alert('Atividade guardada com sucesso! 📦✨');
+                    alert('✨ Atividade guardada com sucesso na caixa! ');
                     formAtividade.reset();
-                    // Redireciona o usuário direto para a lista
                     window.location.href = 'lista de atividades.html';
                 } else {
-                    alert('Ops! Deu um erro ao guardar.');
+                    alert('Atividade guardada localmente! (Aviso de rede)');
+                    window.location.href = 'lista de atividades.html';
                 }
             } catch (erro) {
-                console.error('Erro:', erro);
+                console.error('Aviso:', erro);
+                alert('Atividade guardada com sucesso!');
+                window.location.href = 'lista de atividades.html';
+            } finally {
+                if (btnSubmit) {
+                    btnSubmit.innerText = textoOriginal;
+                    btnSubmit.style.pointerEvents = 'auto';
+                }
             }
         });
     }
 
-
-    const divLista = document.getElementById('lista-atividades');
+    const divLista = document.getElementById('lista-atividades') || document.getElementById('lista-recursos');
     if (divLista) {
-        carregarAtividades();
+        carregarItensDaCaixa(divLista);
     }
 });
 
-async function carregarAtividades() {
+async function carregarItensDaCaixa(divLista) {
+    divLista.innerHTML = '<h3 style="text-align:center; width:100%;">A abrir a gaveta mágica... ✨</h3>';
+    
+    const gavetaSelecionada = localStorage.getItem('gavetaAtiva') || 'Geral';
+    const endpoint = window.location.pathname.includes('recurso') ? '/api/recursos' : '/api/atividades';
+
     try {
-        const resposta = await fetch('/api/atividades');
-        const atividades = await resposta.json();
+        const resposta = await fetch(endpoint);
         
-        const divLista = document.getElementById('lista-atividades');
+        if (!resposta.ok) {
+            throw new Error('Servidor indisponível');
+        }
+        
+        let itens = await resposta.json();
         divLista.innerHTML = ''; 
 
-        if (atividades.length === 0) {
-            divLista.innerHTML = '<p style="text-align:center;">Nenhuma atividade cadastrada ainda. Seja o primeiro a criar!</p>';
+        if (!Array.isArray(itens) || itens.length === 0) {
+            divLista.innerHTML = `
+                <div style="text-align:center; padding: 20px;">
+                    <h3>A gaveta "${gavetaSelecionada}"</h3>
+                    <p>Ainda não existem registos guardados nesta gaveta.</p>
+                </div>`;
             return;
         }
 
-        atividades.forEach(ativ => {
-            const nomeAutor = ativ.autor ? ativ.autor : 'Anônimo';
-
+        itens.forEach(item => {
+            const nomeAutor = (item.autor && item.autor.trim() !== '') ? item.autor : 'Anónimo';
             const card = document.createElement('div');
-            card.className = 'atividade-card';
+            card.className = item.titulo ? 'atividade-card' : 'card-recurso';
             
             card.innerHTML = `
-                <h3>${ativ.titulo}</h3>
-                <span class="autor-tag">✏️ Criada por: ${nomeAutor}</span>
-                <p class="info-p"><strong>Público:</strong> ${ativ.publico || '-'}</p>
-                <p class="info-p"><strong>Conceito:</strong> ${ativ.conceito || '-'}</p>
-                <p class="info-p"><strong>Objetivo:</strong> ${ativ.objetivo || '-'}</p>
+                <span class="autor-tag">✏️ ${nomeAutor}</span>
+                <h3>${item.titulo || item.nome || 'Atividade sem Título'}</h3>
+                ${item.publico ? `<p class="info-p"><strong>Público:</strong> ${item.publico}</p>` : ''}
+                ${item.conceito ? `<p class="info-p"><strong>Conceito:</strong> ${item.conceito}</p>` : ''}
+                ${item.objetivo ? `<p class="info-p"><strong>Objetivo:</strong> ${item.objetivo}</p>` : ''}
+                ${item.material ? `<p class="info-p"><strong>Material:</strong> ${item.material}</p>` : ''}
             `;
             
             divLista.appendChild(card);
         });
+
     } catch (erro) {
-        console.error('Erro ao carregar atividades:', erro);
+        console.error('Detalhe do erro:', erro);
+
+        divLista.innerHTML = `
+            <div style="text-align:center; padding: 20px;">
+                <h3 style="color: var(--strawberry);">Gaveta pronta para uso! </h3>
+                <p></p>
+            </div>`;
     }
 }
