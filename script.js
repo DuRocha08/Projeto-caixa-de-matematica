@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 async function carregarItensDaCaixa(divLista) {
-    divLista.innerHTML = '<h3 style="text-align:center; width:100%;">A abrir a gaveta mágica... ✨</h3>';
+    divLista.innerHTML = '<h3 style="text-align:center; width:100%;"> Abrindo a gaveta mágica... </h3>';
     
     const gavetaSelecionada = localStorage.getItem('gavetaAtiva') || 'Geral';
     const endpoint = window.location.pathname.includes('recurso') ? '/api/recursos' : '/api/atividades';
