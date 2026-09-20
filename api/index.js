@@ -6,18 +6,13 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// ---------------------------------------------------------------------------
-// Conexão com o banco (Supabase via pooler)
-// ---------------------------------------------------------------------------
 const connectionString = process.env.POSTGRES_URL || process.env.DATABASE_URL;
 
 if (!connectionString) {
   console.error('Nenhuma variável de conexão definida (POSTGRES_URL ou DATABASE_URL).');
 }
 
-// Remove parâmetros da URL que atrapalham o driver "pg":
-// - sslmode: faz o pg ignorar o "rejectUnauthorized: false" e dar erro de certificado
-// - supa: parâmetro extra do pooler do Supabase que o pg não usa
+
 function limparUrl(url) {
   if (!url) return url;
   try {
@@ -34,12 +29,10 @@ function limparUrl(url) {
 const pool = new Pool({
   connectionString: limparUrl(connectionString),
   ssl: { rejectUnauthorized: false },
-  max: 1 // em ambiente serverless, cada instância só precisa de uma conexão
+  max: 1 
 });
 
-// ---------------------------------------------------------------------------
-// GET /api/atividades  (filtro opcional por gaveta)
-// ---------------------------------------------------------------------------
+
 app.get('/api/atividades', async (req, res) => {
   try {
     const { gaveta } = req.query;
@@ -61,9 +54,7 @@ app.get('/api/atividades', async (req, res) => {
   }
 });
 
-// ---------------------------------------------------------------------------
-// POST /api/atividades
-// ---------------------------------------------------------------------------
+
 app.post('/api/atividades', async (req, res) => {
   try {
     const {
@@ -106,15 +97,12 @@ app.post('/api/atividades', async (req, res) => {
     const resultado = await pool.query(query, valores);
     res.status(201).json(resultado.rows[0]);
   } catch (err) {
-    // O detalhe completo fica só nos logs da Vercel, não vai para o navegador
+    
     console.error('Erro detalhado ao guardar atividade:', err);
     res.status(500).json({ error: 'Erro ao guardar atividade' });
   }
 });
 
-// ---------------------------------------------------------------------------
-// GET /api/recursos
-// ---------------------------------------------------------------------------
 app.get('/api/recursos', async (req, res) => {
   try {
     const resultado = await pool.query('SELECT * FROM recursos ORDER BY id DESC');
