@@ -11,13 +11,13 @@
         <h2 style="text-align: center;">Em qual gaveta vamos guardar?</h2>
         
         <div class="grid-gavetas">
-            <button class="btn-gaveta" onclick="abrirFormularioGaveta('Jogos e brincadeiras matemáticas')">Jogos e brincadeiras</button>
-            <button class="btn-gaveta" onclick="abrirFormularioGaveta('Materiais e recursos manipuláveis')">Materiais manipuláveis</button>
-            <button class="btn-gaveta" onclick="abrirFormularioGaveta('Literatura e Matemática')">Literatura</button>
-            <button class="btn-gaveta" onclick="abrirFormularioGaveta('Recursos digitais')">Recursos digitais</button>
-            <button class="btn-gaveta" onclick="abrirFormularioGaveta('Canais e conteúdos sobre Matemática')">Canais e conteúdos</button>
-            <button class="btn-gaveta" onclick="abrirFormularioGaveta('Autores que fundamentam o ensino')">Autores e Teóricos</button>
-            <button class="btn-gaveta" onclick="abrirFormularioGaveta('Ideias que quero experimentar')">Ideias Novas</button>
+            <button class="btn-gaveta">Jogos e brincadeiras</button>
+            <button class="btn-gaveta">Materiais manipuláveis</button>
+            <button class="btn-gaveta">Literatura</button>
+            <button class="btn-gaveta">Recursos digitais</button>
+            <button class="btn-gaveta">Canais e conteúdos</button>
+            <button class="btn-gaveta">Autores e Teóricos</button>
+            <button class="btn-gaveta">Ideias Novas</button>
         </div>
     
         <hr style="border: 2px dashed #87CEEB; margin: 30px 0;">
@@ -26,7 +26,7 @@
         <div class="grid-opcoes">
             <button class="tab-btn" onclick="window.location.href='lista-recursos.html'">Ver Todos os Recursos</button>
             <button class="tab-btn" onclick="window.location.href='atividade.html'">Criar Atividade</button>
-            <button class="tab-btn" onclick="window.location.href='lista-de-atividades.html'">Ver Atividades</button>
+            <button class="tab-btn" onclick="localStorage.removeItem('gavetaAtiva'); window.location.href='lista-de-atividades.html'">Ver Atividades (todas)</button>
         </div>
         </div>
         <button class="btn-voltar" onclick="window.location.href='index.html'">⬅ Voltar ao Início</button>
