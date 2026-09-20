@@ -11,10 +11,19 @@ const pool = new Pool({
   ssl: { rejectUnauthorized: false }
 });
 
-// Rotas de Atividades
+
 app.get('/api/atividades', async (req, res) => {
   try {
-    const resultado = await pool.query('SELECT * FROM atividades ORDER BY id DESC');
+    const { gaveta } = req.query;
+    let resultado;
+    if (gaveta && gaveta !== 'Geral') {
+      resultado = await pool.query(
+        'SELECT * FROM atividades WHERE gaveta = $1 ORDER BY id DESC',
+        [gaveta]
+      );
+    } else {
+      resultado = await pool.query('SELECT * FROM atividades ORDER BY id DESC');
+    }
     res.json(resultado.rows);
   } catch (err) {
     console.error('Erro ao buscar atividades:', err);
@@ -22,32 +31,55 @@ app.get('/api/atividades', async (req, res) => {
   }
 });
 
+
 app.post('/api/atividades', async (req, res) => {
   try {
-    const { titulo, publico, objetivo, conceito, material, desenvolvimento, mediacao, avaliacao, justificativa, autor } = req.body;
+    const { 
+      titulo, 
+      publico, 
+      objetivo, 
+      conceito, 
+      material, 
+      desenvolvimento, 
+      mediacao, 
+      avaliacao, 
+      justificativa, 
+      autor,
+      gaveta
+    } = req.body;
+    
     const nomeCriador = autor && autor.trim() !== '' ? autor : 'Anónimo'; 
+    const gavetaEscolhida = gaveta && gaveta.trim() !== '' ? gaveta : 'Geral';
     
     const query = `
       INSERT INTO atividades 
-      (titulo, publico, objetivo, conceito, material, desenvolvimento, mediacao, avaliacao, justificativa, autor) 
-      VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) 
+      (titulo, publico, objetivo, conceito, material, desenvolvimento, mediacao, avaliacao, justificativa, autor, gaveta) 
+      VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) 
       RETURNING *`;
     
     const valores = [
-      titulo || '', publico || '', objetivo || '', conceito || '', 
-      material || '', desenvolvimento || '', mediacao || '', 
-      avaliacao || '', justificativa || '', nomeCriador
+      titulo || '', 
+      publico || '', 
+      objetivo || '', 
+      conceito || '', 
+      material || '', 
+      desenvolvimento || '', 
+      mediacao || '', 
+      avaliacao || '', 
+      justificativa || '', 
+      nomeCriador,
+      gavetaEscolhida
     ];
     
     const resultado = await pool.query(query, valores);
     res.status(201).json(resultado.rows[0]);
   } catch (err) {
-    console.error('Erro ao guardar atividade:', err);
+    console.error('Erro detalhado ao guardar atividade:', err);
     res.status(500).json({ error: 'Erro ao guardar atividade', detalhes: err.message });
   }
 });
 
-// Rotas de Recursos
+
 app.get('/api/recursos', async (req, res) => {
   try {
     const resultado = await pool.query('SELECT * FROM recursos ORDER BY id DESC');
