@@ -62,13 +62,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     formAtividade.reset();
                     window.location.href = 'lista-de-atividades.html';
                 } else {
-                    alert('Atividade guardada localmente! (Aviso de rede)');
-                    window.location.href = 'lista-de-atividades.html';
+                    alert('❌ Não foi possível guardar a atividade. Tente novamente em instantes.');
                 }
             } catch (erro) {
-                console.error('Aviso:', erro);
-                alert('Atividade guardada com sucesso!');
-                window.location.href = 'lista-de-atividades.html';
+                console.error('Erro ao guardar atividade:', erro);
+                alert('❌ Não foi possível guardar a atividade. Verifique sua conexão e tente novamente.');
             } finally {
                 if (btnSubmit) {
                     btnSubmit.innerText = textoOriginal;
@@ -85,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 async function carregarItensDaCaixa(divLista) {
-    divLista.innerHTML = '<h3 style="text-align:center; width:100%;"> Abrindo a gaveta mágica... </h3>';
+    divLista.innerHTML = '<h3 style="text-align:center; width:100%;">A abrir a gaveta mágica... ✨</h3>';
     
     const gavetaSelecionada = localStorage.getItem('gavetaAtiva') || 'Geral';
     const endpoint = window.location.pathname.includes('recurso') ? '/api/recursos' : '/api/atividades';
