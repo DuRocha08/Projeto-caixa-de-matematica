@@ -4,28 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Criar Atividade - Caixa de Matemática</title>
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Criar Nova Atividade </h1>
-        <p><a href="index.html" style="color: var(--meringe); text-decoration: none;"> Voltar ao Início</a></p>
-    </header>
-    <main>
-        <section class="card-cadastro">
-            <form id="form-atividade">
-                <input type="text" id="titulo" placeholder="Título da Atividade" required>
-                <input type="text" id="autor" placeholder="Seu Nome (Quem criou?)">
-                <input type="text" id="publico" placeholder="Público Alvo (Ex: 3º Ano)">
-                <input type="text" id="conceito" placeholder="Conceito Matemático">
-                <textarea id="objetivo" placeholder="Objetivo da Atividade" rows="2"></textarea>
-                <textarea id="material" placeholder="Materiais Necessários" rows="2"></textarea>
-                <textarea id="desenvolvimento" placeholder="Desenvolvimento da Atividade" rows="3"></textarea>
-                <button type="submit">Guardar Atividade! </button>
-            </form>
-        </section>
-    </main>
+    <div class="container tela">
+        <button class="btn-voltar" onclick="window.location.href='gavetas.html'">⬅ Voltar ao Menu</button>
+        <h2 style="text-align: center;">Nova Proposta de Atividade</h2>
+        
+        <div class="form-group">
+            <label>Título da atividade:</label>
+            <input type="text" id="atv-titulo" placeholder="Ex: Feirinha da Matemática">
+        </div>
+        <div class="form-group">
+            <label>Público ou faixa etária/ano: </label>
+            <input type="text" id="atv-publico" placeholder="Ex: 2º ano do Ensino Fundamental">
+        </div>
+        <div class="form-group">
+            <label>Objetivo de aprendizagem:</label>
+            <textarea id="atv-objetivo" rows="2" placeholder="O que se espera que os estudantes aprendam ou desenvolvam?"></textarea>
+        </div>
+        <div class="form-group">
+            <label>Conceito/conteúdo matemático:</label>
+            <input type="text" id="atv-conceito" placeholder="Ex: Adição, subtração e sistema monetário">
+        </div>
+        <div class="form-group">
+            <label>Material ou recurso (Escolhido da Caixa):</label>
+            <input type="text" id="atv-material" placeholder="Ex: Cédulas de dinheiro de brinquedo">
+        </div>
+        <div class="form-group">
+            <label>Desenvolvimento:</label>
+            <textarea id="atv-desenvolvimento" rows="4" placeholder="Como a atividade será organizada e realizada?"></textarea>
+        </div>
+        <div class="form-group">
+            <label>Mediação do professor:</label>
+            <textarea id="atv-mediacao" rows="3" placeholder="Perguntas, intervenções e apoios para o pensamento matemático..."></textarea>
+        </div>
+        <div class="form-group">
+            <label>Avaliação da aprendizagem:</label>
+            <textarea id="atv-avaliacao" rows="2" placeholder="Como você vai observar indícios de aprendizagem durante/após?"></textarea>
+        </div>
+        <div class="form-group">
+            <label>Justificativa da escolha:</label>
+            <textarea id="atv-justificativa" rows="2" placeholder="Por que esse recurso acrescenta à aprendizagem?"></textarea>
+        </div>
+
+        <button class="btn-salvar" onclick="salvarAtividade()" style="background-color: #FF8C00; border-color: #FF4500; box-shadow: 5px 5px 0px #FF4500;">Registrar Atividade!</button>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
