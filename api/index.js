@@ -11,7 +11,7 @@ const pool = new Pool({
   ssl: { rejectUnauthorized: false }
 });
 
-
+// Rotas de Atividades
 app.get('/api/atividades', async (req, res) => {
   try {
     const resultado = await pool.query('SELECT * FROM atividades ORDER BY id DESC');
@@ -22,22 +22,9 @@ app.get('/api/atividades', async (req, res) => {
   }
 });
 
-
 app.post('/api/atividades', async (req, res) => {
   try {
-    const { 
-      titulo, 
-      publico, 
-      objetivo, 
-      conceito, 
-      material, 
-      desenvolvimento, 
-      mediacao, 
-      avaliacao, 
-      justificativa, 
-      autor 
-    } = req.body;
-    
+    const { titulo, publico, objetivo, conceito, material, desenvolvimento, mediacao, avaliacao, justificativa, autor } = req.body;
     const nomeCriador = autor && autor.trim() !== '' ? autor : 'Anónimo'; 
     
     const query = `
@@ -47,27 +34,20 @@ app.post('/api/atividades', async (req, res) => {
       RETURNING *`;
     
     const valores = [
-      titulo || '', 
-      publico || '', 
-      objetivo || '', 
-      conceito || '', 
-      material || '', 
-      desenvolvimento || '', 
-      mediacao || '', 
-      avaliacao || '', 
-      justificativa || '', 
-      nomeCriador
+      titulo || '', publico || '', objetivo || '', conceito || '', 
+      material || '', desenvolvimento || '', mediacao || '', 
+      avaliacao || '', justificativa || '', nomeCriador
     ];
     
     const resultado = await pool.query(query, valores);
     res.status(201).json(resultado.rows[0]);
   } catch (err) {
-    console.error('Erro detalhado ao guardar atividade:', err);
+    console.error('Erro ao guardar atividade:', err);
     res.status(500).json({ error: 'Erro ao guardar atividade', detalhes: err.message });
   }
 });
 
-
+// Rotas de Recursos
 app.get('/api/recursos', async (req, res) => {
   try {
     const resultado = await pool.query('SELECT * FROM recursos ORDER BY id DESC');
