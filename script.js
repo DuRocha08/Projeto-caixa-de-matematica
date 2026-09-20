@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 localStorage.setItem('gavetaAtiva', textoBotao);
                 if (window.location.pathname.includes('gavetas.html')) {
                     e.preventDefault();
-                    window.location.href = 'lista de atividades.html';
+                    window.location.href = 'lista-de-atividades.html';
                 }
             }
         });
@@ -60,15 +60,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (resposta.ok) {
                     alert('✨ Atividade guardada com sucesso na caixa! ');
                     formAtividade.reset();
-                    window.location.href = 'lista de atividades.html';
+                    window.location.href = 'lista-de-atividades.html';
                 } else {
                     alert('Atividade guardada localmente! (Aviso de rede)');
-                    window.location.href = 'lista de atividades.html';
+                    window.location.href = 'lista-de-atividades.html';
                 }
             } catch (erro) {
                 console.error('Aviso:', erro);
                 alert('Atividade guardada com sucesso!');
-                window.location.href = 'lista de atividades.html';
+                window.location.href = 'lista-de-atividades.html';
             } finally {
                 if (btnSubmit) {
                     btnSubmit.innerText = textoOriginal;
