@@ -47,7 +47,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 conceito: document.getElementById('conceito')?.value || '',
                 objetivo: document.getElementById('objetivo')?.value || '',
                 material: document.getElementById('material')?.value || '',
-                desenvolvimento: document.getElementById('desenvolvimento')?.value || ''
+                desenvolvimento: document.getElementById('desenvolvimento')?.value || '',
+                mediacao: document.getElementById('mediacao')?.value || '',
+                avaliacao: document.getElementById('avaliacao')?.value || '',
+                justificativa: document.getElementById('justificativa')?.value || '',
+                gaveta: document.getElementById('gaveta')?.value || 'Geral'
             };
 
             try {
@@ -86,7 +90,10 @@ async function carregarItensDaCaixa(divLista) {
     divLista.innerHTML = '<h3 style="text-align:center; width:100%;">A abrir a gaveta mágica... ✨</h3>';
     
     const gavetaSelecionada = localStorage.getItem('gavetaAtiva') || 'Geral';
-    const endpoint = window.location.pathname.includes('recurso') ? '/api/recursos' : '/api/atividades';
+    const ehRecurso = window.location.pathname.includes('recurso');
+    const endpoint = ehRecurso
+        ? '/api/recursos'
+        : `/api/atividades?gaveta=${encodeURIComponent(gavetaSelecionada)}`;
 
     try {
         const resposta = await fetch(endpoint);
