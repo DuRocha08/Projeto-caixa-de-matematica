@@ -30,7 +30,6 @@ body {
     overflow-x: hidden;
 }
 
-
 .page-wrapper {
     width: 100%;
     max-width: 1000px;
@@ -213,13 +212,13 @@ input:focus, select:focus, textarea:focus {
 }
 
 
-button, .tab-btn, .btn-gaveta, header a, input[type="submit"], .btn-salvar, .btn-principal, .btn-iniciar, .btn-voltar {
+button, .tab-btn, .btn-gaveta, header a, input[type="submit"], .btn-salvar, .btn-principal, .btn-iniciar {
     background: linear-gradient(180deg, #c7372e 0%, var(--strawberry) 100%) !important;
     color: #FFFFFF !important;
     border: 2px solid rgba(255, 255, 255, 0.4) !important; 
     border-radius: 40px !important; 
-    padding: 14px 24px !important;
-    font-size: 1.1rem !important;
+    padding: 12px 15px !important;
+    font-size: 1.05rem !important;
     font-weight: 700 !important;
     text-decoration: none;
     cursor: pointer !important;
@@ -229,15 +228,21 @@ button, .tab-btn, .btn-gaveta, header a, input[type="submit"], .btn-salvar, .btn
         0 6px 0px #821b15, 
         0 12px 15px rgba(44, 63, 112, 0.18) !important;
     transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) !important; 
-    display: inline-block;
-    text-align: center;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
     margin: 6px;
     text-shadow: 0 2px 0 rgba(0, 0, 0, 0.25);
-    flex: 1 1 210px;
-    max-width: 300px;
+    width: 250px !important;
+    min-height: 55px !important;
+    white-space: normal !important;
+    line-height: 1.2 !important;
+    flex: unset !important;
+    max-width: none !important;
 }
 
-button:hover, .tab-btn:hover, .btn-gaveta:hover, header a:hover, input[type="submit"]:hover, .btn-salvar:hover, .btn-iniciar:hover, .btn-voltar:hover {
+button:hover, .tab-btn:hover, .btn-gaveta:hover, header a:hover, input[type="submit"]:hover, .btn-salvar:hover, .btn-iniciar:hover {
     background: linear-gradient(180deg, #d6463c 0%, #b32a22 100%) !important;
     transform: translateY(-4px) scale(1.03) !important;
     box-shadow: 
@@ -255,6 +260,14 @@ button:active, .tab-btn:active, .btn-gaveta:active, header a:active, input[type=
         inset 0 -2px 0px rgba(0, 0, 0, 0.3), 
         0 0px 0px #821b15, 
         0 4px 6px rgba(44, 63, 112, 0.15) !important;
+}
+
+.btn-voltar {
+    width: auto !important;
+    min-height: auto !important;
+    flex: unset !important;
+    display: inline-block !important;
+    padding: 12px 28px !important;
 }
 
 .gaveta-badge, .autor-tag {
@@ -277,7 +290,6 @@ button:active, .tab-btn:active, .btn-gaveta:active, header a:active, input[type=
 
 .hidden { display: none; }
 
-
 @media (max-width: 768px) {
     body {
         padding: 15px 8px;
@@ -292,21 +304,14 @@ button:active, .tab-btn:active, .btn-gaveta:active, header a:active, input[type=
     }
     
     button, .tab-btn, .btn-gaveta, header a, input[type="submit"] {
-        flex: 1 1 100%;
-        max-width: 100%;
+        width: 100% !important;
+        max-width: 100% !important;
         margin-left: 0;
         margin-right: 0;
         margin-bottom: 8px;
     }
 }
 
-.btn-voltar {
-    flex: unset !important;
-    width: auto !important;
-    max-width: none !important;
-    display: inline-block !important;
-    padding: 12px 28px !important;
-}
 .grid-atividades {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -326,13 +331,4 @@ button:active, .tab-btn:active, .btn-gaveta:active, header a:active, input[type=
 .atividade-card {
     width: 100%;
     box-sizing: border-box;
-}
-.tab-btn, .btn-gaveta {
-    text-align: center;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    white-space: normal;
-    line-height: 1.2;
-    padding: 12px 20px;
 }
