@@ -94,4 +94,4 @@ function mostrarGaveta(idGaveta) {
     
     htmlContent += `</section>`;
     container.innerHTML = htmlContent;
-};
+}
