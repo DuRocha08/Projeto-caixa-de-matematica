@@ -91,7 +91,11 @@ function abrirGaveta(idGaveta) {
 
     if (menuGavetas) menuGavetas.classList.add('hidden');
     if (menuExtras) menuExtras.classList.add('hidden');
-    if (areaConteudo) areaConteudo.classList.remove('hidden');
+    
+    if (areaConteudo) {
+        areaConteudo.classList.remove('hidden');
+        areaConteudo.style.display = 'flex';
+    }
     
     let htmlContent = `
         <section class="gaveta-section">
@@ -127,7 +131,12 @@ function voltarAoMenu() {
 
     if (menuGavetas) menuGavetas.classList.remove('hidden');
     if (menuExtras) menuExtras.classList.remove('hidden');
-    if (areaConteudo) areaConteudo.classList.add('hidden');
+    
+    if (areaConteudo) {
+        areaConteudo.classList.add('hidden');
+        areaConteudo.style.display = 'none';
+    }
+    
     if (container) container.innerHTML = '';
 
     window.scrollTo({ top: 0, behavior: 'smooth' });
