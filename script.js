@@ -64,6 +64,7 @@ const bancoDeDadosGavetas = {
     }
 };
 
+
 function abrirGaveta(idGaveta) {
     const menuGavetas = document.getElementById('menu-gavetas');
     const menuExtras = document.getElementById('menu-extras');
@@ -116,3 +117,54 @@ function voltarAoMenu() {
 
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
+
+
+async function criarAtividade(evento) {
+    if (evento) evento.preventDefault();
+
+    const form = document.getElementById('form-atividade') || document.querySelector('form');
+    if (!form) return;
+
+    const dadosAtividade = {
+        titulo: document.getElementById('titulo')?.value || '',
+        publico: document.getElementById('publico')?.value || '',
+        objetivo: document.getElementById('objetivo')?.value || '',
+        conceito: document.getElementById('conceito')?.value || '',
+        material: document.getElementById('material')?.value || '',
+        desenvolvimento: document.getElementById('desenvolvimento')?.value || '',
+        mediacao: document.getElementById('mediacao')?.value || '',
+        avaliacao: document.getElementById('avaliacao')?.value || '',
+        justificativa: document.getElementById('justificativa')?.value || '',
+        autor: document.getElementById('autor')?.value || '',
+        gaveta: document.getElementById('gaveta')?.value || ''
+    };
+
+    try {
+        const resposta = await fetch('/api/atividades', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(dadosAtividade)
+        });
+
+        if (resposta.ok) {
+            alert('Atividade criada e salva com sucesso para todo mundo ver!');
+            form.reset();
+            window.location.href = 'lista-de-atividades.html';
+        } else {
+            alert('Erro ao guardar a atividade no banco de dados. Verifique os campos.');
+        }
+    } catch (erro) {
+        console.error('Erro de conexão:', erro);
+        alert('Não foi possível conectar ao servidor.');
+    }
+}
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const formAtividade = document.getElementById('form-atividade');
+    if (formAtividade) {
+        formAtividade.addEventListener('submit', criarAtividade);
+    }
+});
