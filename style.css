@@ -334,3 +334,6 @@ button:active, .tab-btn:active, .btn-gaveta:active, header a:active, input[type=
     width: 100%;
     box-sizing: border-box;
 }
+.hidden {
+    display: none !important;
+}
