@@ -1,32 +1,31 @@
-
 const bancoDeDadosGavetas = {
-  gaveta1: {
-        titulo: "GAVETA 1 - materiais manipuláveis", /**/
-        introducao: "Nesta gaveta reunimos materiais concretos onde a criança aprende matemática tocando e experimentando. Baseados em Piaget, a criança constrói o número na ação, e em Montessori e Vygotsky, que defendem o material sensorial e a mediação. São materiais acessíveis para trabalhar classificação, contagem e valor posicional de forma concreta", /*[cite: 2]*/
+    gaveta1: {
+        titulo: "GAVETA 1 - materiais manipuláveis",
+        introducao: "Nesta gaveta reunimos materiais concretos onde a criança aprende matemática tocando e experimentando. Baseados em Piaget, a criança constrói o número na ação, e em Montessori e Vygotsky, que defendem o material sensorial e a mediação. São materiais acessíveis para trabalhar classificação, contagem e valor posicional de forma concreta",
         conteudo: [
             { 
                 subtitulo: "Materiais de construção geométrica", 
-                texto: "incentivar os alunos a montar figuras e estruturas, desenvolvendo percepção espacial, formas geométricas e raciocínio lógico.", /*[cite: 2]*/
+                texto: "incentivar os alunos a montar figuras e estruturas, desenvolvendo percepção espacial, formas geométricas e raciocínio lógico.", 
                 img: "img/formas.jpg" 
             },
             { 
                 subtitulo: "Material de centena, dezena e unidade", 
-                texto: "representar números de forma concreta, facilitando a compreensão do valor posicional e da composição e decomposição dos números.", /*[cite: 2]*/
+                texto: "representar números de forma concreta, facilitando a compreensão do valor posicional e da composição e decomposição dos números.", 
                 img: "img/material-dourado.jpg" 
             },
             { 
                 subtitulo: "Copos numerados", 
-                texto: "relacionar números às respectivas quantidades, praticando contagem, ordenação e operações matemáticas.", /*[cite: 2]*/
+                texto: "relacionar números às respectivas quantidades, praticando contagem, ordenação e operações matemáticas.", 
                 img: "img/copos.jpg" 
             },
             { 
                 subtitulo: "Jogos de tabuleiro e trilhas numéricas", 
-                texto: "desenvolver contagem, sequência numérica, adição, subtração e raciocínio lógico.", /*[cite: 2]*/
+                texto: "desenvolver contagem, sequência numérica, adição, subtração e raciocínio lógico.", 
                 img: "img/tabuleiro.jpg" 
             },
             { 
                 subtitulo: "Cartões Numéricos", 
-                texto: "As cartões numéricos podem ser utilizados para trabalhar o reconhecimento e a sequência dos números, relacionando o algarismo à sua escrita por extenso. Também podem ser usados em atividades de ordenação, comparação de quantidades, antecessor e sucessor, composição de números e operações simples.", /*[cite: 2]*/
+                texto: "As cartões numéricos podem ser utilizados para trabalhar o reconhecimento e a sequência dos números, relacionando o algarismo à sua escrita por extenso. Também podem ser usados em atividades de ordenação, comparação de quantidades, antecessor e sucessor, composição de números e operações simples.", 
                 img: "img/cartoes.jpg" 
             }
         ]
@@ -79,7 +78,6 @@ const bancoDeDadosGavetas = {
     }
 };
 
-
 const container = document.getElementById('gavetas-container');
 
 if(container) {
@@ -93,7 +91,7 @@ if(container) {
             htmlContent += `<div class="gaveta-itens">`;
             gaveta.conteudo.forEach(item => {
                 htmlContent += `<article class="item-card">`;
-               
+                
                 if (item.img) {
                     htmlContent += `<img src="${item.img}" alt="${item.subtitulo}" class="card-img">`;
                 }
