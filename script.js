@@ -30,11 +30,11 @@ const bancoDeDadosGavetas = {
         titulo: "CANAIS E CONTEÚDOS",
         introducao: "Vídeos lúdicos para ensinar matemática de forma visual e divertida.",
         conteudo: [
-            { subtitulo: "Descobrindo a adição", texto: "Link: https://youtu.be/5VoXOFOSETI <br>Trabalha a ideia de juntar e acrescentar quantidades. BNCC: EF01MA06 e EF01MA08." },
-            { subtitulo: "Unidade e dezena", texto: "Link: https://youtu.be/O17tkPBHmol <br>Canal: Alfabrinca. Trabalha unidades, dezenas e contagem. BNCC: EF01MA01, EF01MA02, EF01MA05 e EF01MA07." },
-            { subtitulo: "Quiz das formas geométricas", texto: "Link: https://youtu.be/sXfj2Qh88h0 <br>Trabalha figuras como círculo, quadrado, triângulo e retângulo. BNCC: EF01MA14." },
-            { subtitulo: "Soma com dinossauros", texto: "Link: https://youtu.be/prsJNR0Zbqg <br>Canal: Smile and Learn. Ensina adição de forma lúdica. BNCC: EF01MA06 e EF01MA08." },
-            { subtitulo: "Subtração com dinossauros", texto: "Link: https://youtu.be/V0NVAh4Adxs <br>Canal: Smile and Learn. Trabalha a ideia de retirar e separar. BNCC: EF01MA06 e EF01MA08." }
+            { subtitulo: "Descobrindo a adição", texto: 'Link: <a href="https://youtu.be/5VoXOFOSETI" target="_blank" style="color: var(--strawberry); font-weight: bold; text-decoration: underline;">https://youtu.be/5VoXOFOSETI</a> <br>Trabalha a ideia de juntar e acrescentar quantidades. BNCC: EF01MA06 e EF01MA08.' },
+            { subtitulo: "Unidade e dezena", texto: 'Link: <a href="https://youtu.be/O17tkPBHmol" target="_blank" style="color: var(--strawberry); font-weight: bold; text-decoration: underline;">https://youtu.be/O17tkPBHmol</a> <br>Canal: Alfabrinca. Trabalha unidades, dezenas e contagem. BNCC: EF01MA01, EF01MA02, EF01MA05 e EF01MA07.' },
+            { subtitulo: "Quiz das formas geométricas", texto: 'Link: <a href="https://youtu.be/sXfj2Qh88h0" target="_blank" style="color: var(--strawberry); font-weight: bold; text-decoration: underline;">https://youtu.be/sXfj2Qh88h0</a> <br>Trabalha figuras como círculo, quadrado, triângulo e retângulo. BNCC: EF01MA14.' },
+            { subtitulo: "Soma com dinossauros", texto: 'Link: <a href="https://youtu.be/prsJNR0Zbqg" target="_blank" style="color: var(--strawberry); font-weight: bold; text-decoration: underline;">https://youtu.be/prsJNR0Zbqg</a> <br>Canal: Smile and Learn. Ensina adição de forma lúdica. BNCC: EF01MA06 e EF01MA08.' },
+            { subtitulo: "Subtração com dinossauros", texto: 'Link: <a href="https://youtu.be/V0NVAh4Adxs" target="_blank" style="color: var(--strawberry); font-weight: bold; text-decoration: underline;">https://youtu.be/V0NVAh4Adxs</a> <br>Canal: Smile and Learn. Trabalha a ideia de retirar e separar. BNCC: EF01MA06 e EF01MA08.' }
         ]
     },
     gaveta5: {
