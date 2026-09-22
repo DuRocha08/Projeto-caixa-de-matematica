@@ -66,11 +66,21 @@ const bancoDeDadosGavetas = {
     }
 };
 
-function mostrarGaveta(idGaveta) {
+function abrirGaveta(idGaveta) {
+    const menuGavetas = document.getElementById('menu-gavetas');
+    const menuExtras = document.getElementById('menu-extras');
+    const areaConteudo = document.getElementById('area-conteudo-gaveta');
     const container = document.getElementById('gavetas-container');
     const gaveta = bancoDeDadosGavetas[idGaveta];
     
     if (!container || !gaveta) return;
+
+
+    menuGavetas.classList.add('hidden');
+    menuExtras.classList.add('hidden');
+
+ 
+    areaConteudo.classList.remove('hidden');
     
     let htmlContent = `
         <section class="gaveta-section">
@@ -94,4 +104,22 @@ function mostrarGaveta(idGaveta) {
     
     htmlContent += `</section>`;
     container.innerHTML = htmlContent;
+
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function voltarAoMenu() {
+    const menuGavetas = document.getElementById('menu-gavetas');
+    const menuExtras = document.getElementById('menu-extras');
+    const areaConteudo = document.getElementById('area-conteudo-gaveta');
+
+  
+    menuGavetas.classList.remove('hidden');
+    menuExtras.classList.remove('hidden');
+
+  
+    areaConteudo.classList.add('hidden');
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 }
