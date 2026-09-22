@@ -327,3 +327,12 @@ button:active, .tab-btn:active, .btn-gaveta:active, header a:active, input[type=
     width: 100%;
     box-sizing: border-box;
 }
+.tab-btn, .btn-gaveta {
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: normal;
+    line-height: 1.2;
+    padding: 12px 20px;
+}
