@@ -1,98 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap');
+
+:root {
+    --blueberry: #2C3F70; 
+    --strawberry: #A5231C; 
+    --buttercream: #C8D4E5; 
+    --violet: #8089D2; 
+    --meringue: #E8EBED; 
+}
+
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Fredoka', cursive, sans-serif !important;
 }
 
 body {
-    background-color: #f4f7f6;
-    color: #333;
+    background-color: var(--meringue);
+    background-image: 
+        radial-gradient(circle at 10% 10%, rgba(200, 212, 229, 0.5) 0%, transparent 35%),
+        radial-gradient(circle at 90% 90%, rgba(128, 137, 210, 0.15) 0%, transparent 35%);
+    background-attachment: fixed;
+    color: var(--blueberry);
+    margin: 0;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
 }
 
-header {
-    background-color: #2c3e50;
-    color: white;
-    text-align: center;
-    padding: 2rem;
-}
-
-.home-container {
-    text-align: center;
-    padding: 4rem 2rem;
-}
-
-.home-container h2 {
-    margin-bottom: 1rem;
-    color: #2c3e50;
-}
-
-.home-container p {
-    margin-bottom: 2rem;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    line-height: 1.6;
-}
-
-.btn-iniciar, .btn-voltar {
-    display: inline-block;
-    background-color: #e74c3c;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    margin-top: 10px;
-}
-
-.btn-iniciar:hover, .btn-voltar:hover {
-    background-color: #c0392b;
-}
-
-#gavetas-container {
-    max-width: 1000px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-}
-
-.gaveta-section {
-    background: white;
-    margin-bottom: 3rem;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-
-.gaveta-section h2 {
-    color: #2980b9;
-    border-bottom: 2px solid #ecf0f1;
-    padding-bottom: 10px;
+h1 {
+    color: var(--strawberry);
+    font-size: 3.2rem;
+    font-weight: 700;
+    text-align: center; 
     margin-bottom: 15px;
-    text-transform: uppercase;
+    text-shadow: 
+        0 4px 0px rgba(165, 35, 28, 0.15), 
+        0 10px 20px rgba(44, 63, 112, 0.12);
+    line-height: 1.1;
 }
 
-.intro-gaveta {
+h2 {
+    color: var(--blueberry);
+    font-size: 2.2rem;
+    font-weight: 700;
+    text-align: center;
+    text-shadow: 
+        0 3px 0px rgba(44, 63, 112, 0.1), 
+        0 8px 15px rgba(44, 63, 112, 0.08);
+    margin-bottom: 25px;
+}
+
+h3 {
+    color: var(--strawberry);
+    font-size: 1.6rem;
+    font-weight: 600;
+    border-bottom: 3px dashed var(--buttercream);
+    padding-bottom: 10px;
+    margin: 0 0 15px 0;
+}
+
+p, label, span, .info-p {
+    color: var(--blueberry);
+    font-size: 1.15rem;
+    font-weight: 500;
     line-height: 1.6;
-    margin-bottom: 2rem;
-    font-size: 1.1rem;
+    text-align: center;
 }
 
-.gaveta-itens {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-}
-
-.item-card {
-    background: #f9f9f9;
-    padding: 15px;
-    border-radius: 8px;
-    border: 1px solid #e0e0e0;
+.container, .card-cadastro, .todas-atividades, .gaveta-section {
+    background: linear-gradient(180deg, #FFFFFF 0%, #FAFCFD 100%);
+    border: 5px solid var(--buttercream);
+    border-radius: 40px; 
+    padding: 45px 40px;
+    width: 100%;
+    max-width: 1000px;
+    box-shadow: 
+        inset 0 6px 0px rgba(255, 255, 255, 0.9), 
+        0 15px 35px rgba(44, 63, 112, 0.08), 
+        0 6px 12px rgba(44, 63, 112, 0.04); 
+    margin: 0 auto 30px auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+}
+
+.gaveta-section {
+    text-align: left;
+    align-items: stretch;
+}
+
+.gaveta-section h2 {
+    color: var(--violet);
+    border-bottom: 3px solid var(--buttercream);
+    padding-bottom: 15px;
+    text-align: left;
+}
+
+.intro-gaveta {
+    text-align: left;
+    font-size: 1.15rem;
+    margin-bottom: 30px;
+}
+
+.grid-atividades, .gaveta-itens {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    width: 100%;
+}
+
+.card-recurso, .atividade-card, .item-card {
+    background: linear-gradient(180deg, #FFFFFF 0%, #F5F7FA 100%);
+    border: 4px solid var(--buttercream);
+    border-radius: 30px; 
+    padding: 25px;
+    text-align: left;
+    position: relative;
+    box-shadow: 
+        inset 0 4px 0px rgba(255, 255, 255, 1), 
+        0 6px 0px var(--buttercream), 
+        0 12px 20px rgba(44, 63, 112, 0.06);
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1); 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-recurso:hover, .atividade-card:hover, .item-card:hover {
+    transform: translateY(-5px) scale(1.02); 
+    border-color: var(--violet);
 }
 
 .card-img {
@@ -100,17 +139,131 @@ header {
     height: 180px;
     object-fit: contain; 
     margin-bottom: 15px;
-    border-radius: 5px;
+    border-radius: 15px;
 }
 
-.item-card h3 {
-    font-size: 1.1rem;
-    color: #2c3e50;
-    margin-bottom: 10px;
+.form-group {
+    margin-bottom: 22px;
+    text-align: left;
+    width: 100%;
 }
 
-.item-card p {
-    font-size: 0.95rem;
-    line-height: 1.5;
-    color: #555;
+label {
+    margin-left: 5px;
+    margin-bottom: 8px;
+    display: block;
+    font-weight: 600;
+    text-align: left;
+}
+
+input, select, textarea {
+    width: 100%; 
+    padding: 16px 22px;
+    border: 3px solid var(--buttercream);
+    border-radius: 25px; 
+    font-size: 1.15rem;
+    font-weight: 500;
+    outline: none;
+    color: var(--blueberry);
+    background-color: var(--meringue);
+    box-shadow: 
+        inset 0 5px 8px rgba(44, 63, 112, 0.06), 
+        0 2px 0 rgba(255, 255, 255, 0.9);
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: var(--violet);
+    background-color: #FFFFFF;
+}
+
+.tabs {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 25px;
+    width: 100%;
+}
+
+button, .tab-btn, .btn-gaveta, header a, input[type="submit"], .btn-salvar, .btn-principal, .btn-iniciar, .btn-voltar {
+    background: linear-gradient(180deg, #c7372e 0%, var(--strawberry) 100%) !important;
+    color: #FFFFFF !important;
+    border: 2px solid rgba(255, 255, 255, 0.4) !important; 
+    border-radius: 40px !important; 
+    padding: 14px 28px !important;
+    font-size: 1.2rem !important;
+    font-weight: 700 !important;
+    text-decoration: none;
+    cursor: pointer !important;
+    box-shadow: 
+        inset 0 4px 0px rgba(255, 255, 255, 0.35), 
+        inset 0 -4px 0px rgba(0, 0, 0, 0.2), 
+        0 6px 0px #821b15, 
+        0 12px 15px rgba(44, 63, 112, 0.18) !important;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) !important; 
+    display: inline-block;
+    text-align: center;
+    margin: 6px;
+    text-shadow: 0 2px 0 rgba(0, 0, 0, 0.25);
+}
+
+button:hover, .tab-btn:hover, .btn-gaveta:hover, header a:hover, input[type="submit"]:hover, .btn-salvar:hover, .btn-iniciar:hover, .btn-voltar:hover {
+    background: linear-gradient(180deg, #d6463c 0%, #b32a22 100%) !important;
+    transform: translateY(-4px) scale(1.03) !important;
+    box-shadow: 
+        inset 0 4px 0px rgba(255, 255, 255, 0.45), 
+        inset 0 -4px 0px rgba(0, 0, 0, 0.15), 
+        0 10px 0px #821b15, 
+        0 18px 20px rgba(44, 63, 112, 0.22) !important;
+    color: #FFFFFF !important;
+}
+
+button:active, .tab-btn:active, .btn-gaveta:active, header a:active, input[type="submit"]:active {
+    transform: translateY(6px) scale(0.97) !important;
+    box-shadow: 
+        inset 0 4px 0px rgba(255, 255, 255, 0.15), 
+        inset 0 -2px 0px rgba(0, 0, 0, 0.3), 
+        0 0px 0px #821b15, 
+        0 4px 6px rgba(44, 63, 112, 0.15) !important;
+}
+
+.gaveta-badge, .autor-tag {
+    background: linear-gradient(180deg, #F9FAFB 0%, var(--buttercream) 100%);
+    color: var(--blueberry);
+    padding: 8px 18px;
+    border-radius: 25px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    position: absolute;
+    top: -20px;
+    right: 25px;
+    border: 3px solid #FFFFFF;
+    box-shadow: 
+        inset 0 -3px 0px rgba(128, 137, 210, 0.15), 
+        0 5px 0px var(--violet), 
+        0 10px 15px rgba(44, 63, 112, 0.12);
+    z-index: 2;
+}
+
+.hidden { display: none; }
+
+@media (max-width: 600px) {
+    body {
+        padding: 15px 10px;
+    }
+    
+    h1 { font-size: 2.3rem; }
+    h2 { font-size: 1.8rem; }
+    
+    .container, .card-cadastro, .todas-atividades, .gaveta-section {
+        padding: 30px 15px 20px 15px; 
+        border-radius: 30px;
+    }
+    
+    button, .tab-btn, .btn-gaveta, header a, input[type="submit"] {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
 }
