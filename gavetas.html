@@ -16,8 +16,6 @@
     
     <div class="container">
         <h2>Em qual gaveta vamos guardar?</h2>
-        
-        
         <div class="tabs">
             <button class="tab-btn" onclick="mostrarGaveta('gaveta1')">Materiais manipuláveis</button>
             <button class="tab-btn" onclick="mostrarGaveta('gaveta2')">Jogos e brincadeiras</button>
@@ -25,11 +23,22 @@
             <button class="tab-btn" onclick="mostrarGaveta('gaveta4')">Canais e conteúdos</button>
             <button class="tab-btn" onclick="mostrarGaveta('gaveta5')">Literatura</button>
             <button class="tab-btn" onclick="mostrarGaveta('gaveta6')">Autores e Teóricos</button>
-            <button class="tab-btn" onclick="mostrarGaveta('gaveta7')">Ideias Novas</button>
+            <button class="tab-btn" onclick="mostrarGaveta('gaveta7')">Quem somos nós</button>
         </div>
     </div>
 
-    <main id="gavetas-container">
+    
+    <div class="container">
+        <h2>O que mais deseja fazer?</h2>
+        <div class="tabs">
+            <a href="lista-recursos.html" class="btn-gaveta">Ver Todos os Recursos</a>
+            <a href="atividade.html" class="btn-gaveta">Criar Atividade</a>
+            <a href="lista-de-atividades.html" class="btn-gaveta">Ver Atividades (todas)</a>
+        </div>
+    </div>
+
+
+    <main id="gavetas-container" style="width: 100%; max-width: 1000px; display: flex; flex-direction: column; align-items: center;">
     </main>
 
     <script src="script.js"></script>
