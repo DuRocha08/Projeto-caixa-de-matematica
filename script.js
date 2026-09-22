@@ -3,27 +3,27 @@ const bancoDeDadosGavetas = {
         titulo: "MATERIAIS MANIPULÁVEIS",
         introducao: "Nesta gaveta reunimos materiais concretos onde a criança aprende matemática tocando e experimentando. Baseados em Piaget, a criança constrói o número na ação, e em Montessori e Vygotsky, que defendem o material sensorial e a mediação.",
         conteudo: [
-            { subtitulo: "Materiais de construção geométrica", texto: "Incentivar os alunos a montar figuras e estruturas, desenvolvendo percepção espacial, formas geométricas e raciocínio lógico.", img: "img/formas.jpg" },
-            { subtitulo: "Material de centena, dezena e unidade", texto: "Representar números de forma concreta, facilitando a compreensão do valor posicional e da composição e decomposição dos números.", img: "img/material-dourado.jpg" },
-            { subtitulo: "Copos numerados", texto: "Relacionar números às respectivas quantidades, praticando contagem, ordenação e operações matemáticas.", img: "img/copos.jpg" },
-            { subtitulo: "Jogos de tabuleiro e trilhas numéricas", texto: "Desenvolver contagem, sequência numérica, adição, subtração e raciocínio lógico.", img: "img/tabuleiro.jpg" },
-            { subtitulo: "Cartões Numéricos", texto: "Os cartões numéricos podem ser utilizados para trabalhar o reconhecimento e a sequência dos números, relacionando o algarismo à sua escrita por extenso.", img: "img/cartoes.jpg" }
+            { subtitulo: "Materiais de construção geométrica", texto: "Incentivar os alunos a montar figuras e estruturas, desenvolvendo percepção espacial, formas geométricas e raciocínio lógico.", img: "/img/formas.jpg" },
+            { subtitulo: "Material de centena, dezena e unidade", texto: "Representar números de forma concreta, facilitando a compreensão do valor posicional e da composição e decomposição dos números.", img: "/img/material-dourado.jpg" },
+            { subtitulo: "Copos numerados", texto: "Relacionar números às respectivas quantidades, praticando contagem, ordenação e operações matemáticas.", img: "/img/copos.jpg" },
+            { subtitulo: "Jogos de tabuleiro e trilhas numéricas", texto: "Desenvolver contagem, sequência numérica, adição, subtração e raciocínio lógico.", img: "/img/tabuleiro.jpg" },
+            { subtitulo: "Cartões Numéricos", texto: "Os cartões numéricos podem ser utilizados para trabalhar o reconhecimento e a sequência dos números, relacionando o algarismo à sua escrita por extenso.", img: "/img/cartoes.jpg" }
         ]
     },
     gaveta2: {
         titulo: "JOGOS E BRINCADEIRAS",
         introducao: "Esta gaveta reúne uma seleção de jogos físicos e brincadeiras motoras voltados para o ensino de Matemática nos Anos Iniciais do Ensino Fundamental.",
         conteudo: [
-            { subtitulo: "Grupos (jogo físico de agrupamento)", texto: "Conceito matemático: desenvolvimento da contagem, noção de agrupamento e cálculo mental rápido. Público: 1º ao 4º ano.", img: "img/grupos.jpg" },
-            { subtitulo: "Estafeta dos Números", texto: "Conceito matemático: resolução de operações básicas (adição e subtração), velocidade de cálculo mental. Público: 1º ao 5º ano.", img: "img/estafeta.jpg" }
+            { subtitulo: "Grupos (jogo físico de agrupamento)", texto: "Conceito matemático: desenvolvimento da contagem, noção de agrupamento e cálculo mental rápido. Público: 1º ao 4º ano.", img: "/img/grupos.jpg" },
+            { subtitulo: "Estafeta dos Números", texto: "Conceito matemático: resolução de operações básicas (adição e subtração), velocidade de cálculo mental. Público: 1º ao 5º ano.", img: "/img/estafeta.jpg" }
         ]
     },
     gaveta3: {
         titulo: "RECURSOS DIGITAIS",
         introducao: "Plataformas e recursos digitais interativos voltados para o pensamento matemático.",
         conteudo: [
-            { subtitulo: "Escola Games (Site)", texto: "Operações fundamentais, cálculo mental, resolução de problemas. Público: 1º ao 5º ano.", img: "img/escolagames.jpg" },
-            { subtitulo: "IXL Learning (Programa Online)", texto: "Desenvolvimento progressivo do pensamento matemático (contagem, geometria, frações).", img: "img/ixl.jpg" }
+            { subtitulo: "Escola Games (Site)", texto: "Operações fundamentais, cálculo mental, resolução de problemas. Público: 1º ao 5º ano.", img: "/img/escolagames.jpg" },
+            { subtitulo: "IXL Learning (Programa Online)", texto: "Desenvolvimento progressivo do pensamento matemático (contagem, geometria, frações).", img: "/img/ixl.jpg" }
         ]
     },
     gaveta4: {
@@ -51,10 +51,10 @@ const bancoDeDadosGavetas = {
         titulo: "AUTORES E TEÓRICOS",
         introducao: "Autores que explicam por que ensinamos matemática manipulando, jogando e com mediação.",
         conteudo: [
-            { subtitulo: "JEAN PIAGET", texto: "Conceito: Classificação, seriação e conservação do número. Mostrou que a criança constrói o número agindo sobre os objetos.", img: "img/piaget.jpg" },
-            { subtitulo: "LEV VYGOTSKY", texto: "Conceito: Zona de Desenvolvimento Proximal (ZDP), mediação e linguagem. A criança aprende matemática com ajuda do outro.", img: "img/vygotsky.jpg" },
-            { subtitulo: "JOHN VAN DE WALLE", texto: "Conceito: Valor posicional e resolução de problemas. A aula começa com um problema, a criança cria a própria estratégia.", img: "img/vandewalle.jpg" },
-            { subtitulo: "UBIRATAN D'AMBROSIO", texto: "Conceito: Etnomatemática (matemática do cotidiano). Mostra que existe matemática na feira, na receita, na construção.", img: "img/dambrosio.jpg" }
+            { subtitulo: "JEAN PIAGET", texto: "Conceito: Classificação, seriação e conservação do número. Mostrou que a criança constrói o número agindo sobre os objetos.", img: "/img/piaget.jpg" },
+            { subtitulo: "LEV VYGOTSKY", texto: "Conceito: Zona de Desenvolvimento Proximal (ZDP), mediação e linguagem. A criança aprende matemática com ajuda do outro.", img: "/img/vygotsky.jpg" },
+            { subtitulo: "JOHN VAN DE WALLE", texto: "Conceito: Valor posicional e resolução de problemas. A aula começa com um problema, a criança cria a própria estratégia.", img: "/img/vandewalle.jpg" },
+            { subtitulo: "UBIRATAN D'AMBROSIO", texto: "Conceito: Etnomatemática (matemática do cotidiano). Mostra que existe matemática na feira, na receita, na construção.", img: "/img/dambrosio.jpg" }
         ]
     },
     gaveta7: {
