@@ -14,23 +14,22 @@
                 <a href="index.html" class="btn-voltar">Voltar para o Início</a>
             </nav>
         </header>
-        
-  
-        <div class="container">
+     
+        <div id="menu-gavetas" class="container">
             <h2>Em qual gaveta vamos guardar?</h2>
             <div class="tabs">
-                <button class="tab-btn" onclick="mostrarGaveta('gaveta1')">Materiais manipuláveis</button>
-                <button class="tab-btn" onclick="mostrarGaveta('gaveta2')">Jogos e brincadeiras</button>
-                <button class="tab-btn" onclick="mostrarGaveta('gaveta3')">Recursos digitais</button>
-                <button class="tab-btn" onclick="mostrarGaveta('gaveta4')">Canais e conteúdos</button>
-                <button class="tab-btn" onclick="mostrarGaveta('gaveta5')">Literatura</button>
-                <button class="tab-btn" onclick="mostrarGaveta('gaveta6')">Autores e Teóricos</button>
-                <button class="tab-btn" onclick="mostrarGaveta('gaveta7')">Ideias Novas</button>
+                <button class="tab-btn" onclick="abrirGaveta('gaveta1')">Materiais manipuláveis</button>
+                <button class="tab-btn" onclick="abrirGaveta('gaveta2')">Jogos e brincadeiras</button>
+                <button class="tab-btn" onclick="abrirGaveta('gaveta3')">Recursos digitais</button>
+                <button class="tab-btn" onclick="abrirGaveta('gaveta4')">Canais e conteúdos</button>
+                <button class="tab-btn" onclick="abrirGaveta('gaveta5')">Literatura</button>
+                <button class="tab-btn" onclick="abrirGaveta('gaveta6')">Autores e Teóricos</button>
+                <button class="tab-btn" onclick="abrirGaveta('gaveta7')">Ideias Novas</button>
             </div>
         </div>
 
-       
-        <div class="container">
+     
+        <div id="menu-extras" class="container">
             <h2>O que mais deseja fazer?</h2>
             <div class="tabs">
                 <a href="lista-recursos.html" class="btn-gaveta">Ver Todos os Recursos</a>
@@ -39,8 +38,11 @@
             </div>
         </div>
 
-        <main id="gavetas-container" style="width: 100%; display: flex; flex-direction: column; align-items: center;">
-        </main>
+    
+        <div id="area-conteudo-gaveta" class="hidden" style="width: 100%; display: flex; flex-direction: column; align-items: center;">
+            <button class="btn-voltar" onclick="voltarAoMenu()" style="margin-bottom: 25px;">← Escolher Outra Gaveta</button>
+            <main id="gavetas-container" style="width: 100%; display: flex; flex-direction: column; align-items: center;"></main>
+        </div>
     </div>
 
     <script src="script.js"></script>
