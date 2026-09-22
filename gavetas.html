@@ -7,39 +7,41 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Caixa de Matemática</h1>
-        <nav>
-            <a href="index.html" class="btn-voltar">Voltar para o Início</a>
-        </nav>
-    </header>
-    
-    <div class="container">
-        <h2>Em qual gaveta vamos guardar?</h2>
-        <div class="tabs">
-            <button class="tab-btn" onclick="mostrarGaveta('gaveta1')">Materiais manipuláveis</button>
-            <button class="tab-btn" onclick="mostrarGaveta('gaveta2')">Jogos e brincadeiras</button>
-            <button class="tab-btn" onclick="mostrarGaveta('gaveta3')">Recursos digitais</button>
-            <button class="tab-btn" onclick="mostrarGaveta('gaveta4')">Canais e conteúdos</button>
-            <button class="tab-btn" onclick="mostrarGaveta('gaveta5')">Literatura</button>
-            <button class="tab-btn" onclick="mostrarGaveta('gaveta6')">Autores e Teóricos</button>
-            <button class="tab-btn" onclick="mostrarGaveta('gaveta7')">Quem somos nós</button>
+    <div class="page-wrapper">
+        <header>
+            <h1>Caixa de Matemática</h1>
+            <nav style="margin-top: 15px;">
+                <a href="index.html" class="btn-voltar">Voltar para o Início</a>
+            </nav>
+        </header>
+        
+  
+        <div class="container">
+            <h2>Em qual gaveta vamos guardar?</h2>
+            <div class="tabs">
+                <button class="tab-btn" onclick="mostrarGaveta('gaveta1')">Materiais manipuláveis</button>
+                <button class="tab-btn" onclick="mostrarGaveta('gaveta2')">Jogos e brincadeiras</button>
+                <button class="tab-btn" onclick="mostrarGaveta('gaveta3')">Recursos digitais</button>
+                <button class="tab-btn" onclick="mostrarGaveta('gaveta4')">Canais e conteúdos</button>
+                <button class="tab-btn" onclick="mostrarGaveta('gaveta5')">Literatura</button>
+                <button class="tab-btn" onclick="mostrarGaveta('gaveta6')">Autores e Teóricos</button>
+                <button class="tab-btn" onclick="mostrarGaveta('gaveta7')">Ideias Novas</button>
+            </div>
         </div>
-    </div>
 
-    
-    <div class="container">
-        <h2>O que mais deseja fazer?</h2>
-        <div class="tabs">
-            <a href="lista-recursos.html" class="btn-gaveta">Ver Todos os Recursos</a>
-            <a href="atividade.html" class="btn-gaveta">Criar Atividade</a>
-            <a href="lista-de-atividades.html" class="btn-gaveta">Ver Atividades (todas)</a>
+       
+        <div class="container">
+            <h2>O que mais deseja fazer?</h2>
+            <div class="tabs">
+                <a href="lista-recursos.html" class="btn-gaveta">Ver Todos os Recursos</a>
+                <a href="atividade.html" class="btn-gaveta">Criar Atividade</a>
+                <a href="lista-de-atividades.html" class="btn-gaveta">Ver Atividades (todas)</a>
+            </div>
         </div>
+
+        <main id="gavetas-container" style="width: 100%; display: flex; flex-direction: column; align-items: center;">
+        </main>
     </div>
-
-
-    <main id="gavetas-container" style="width: 100%; max-width: 1000px; display: flex; flex-direction: column; align-items: center;">
-    </main>
 
     <script src="script.js"></script>
 </body>
