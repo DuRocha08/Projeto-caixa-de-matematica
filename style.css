@@ -290,7 +290,9 @@ button:active, .tab-btn:active, .btn-gaveta:active, header a:active, input[type=
     z-index: 2;
 }
 
-.hidden { display: none; }
+.hidden { 
+    display: none !important; 
+}
 
 @media (max-width: 768px) {
     body {
@@ -334,6 +336,10 @@ button:active, .tab-btn:active, .btn-gaveta:active, header a:active, input[type=
     width: 100%;
     box-sizing: border-box;
 }
-.hidden {
+
+
+body:has(#area-conteudo-gaveta:not(.hidden)) #header-principal,
+body:has(#area-conteudo-gaveta:not(.hidden)) #menu-gavetas,
+body:has(#area-conteudo-gaveta:not(.hidden)) #menu-extras {
     display: none !important;
 }
