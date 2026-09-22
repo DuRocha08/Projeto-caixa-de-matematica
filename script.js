@@ -58,11 +58,9 @@ const bancoDeDadosGavetas = {
         ]
     },
     gaveta7: {
-        titulo: "IDEIAS NOVAS",
-        introducao: "O propósito da nossa caixa de matemática é mostrar que a matemática pode ser ensinada de uma forma mais leve, divertida e interessante.",
-        conteudo: [
-            { subtitulo: "Quem somos nós?", texto: "A nossa caixa visa tornar o aprendizado dinâmico, fazendo com que a criança participe, explore e aprenda brincando através de situações do dia a dia." }
-        ]
+        titulo: "QUEM SOMOS NÓS?",
+        introducao: "O propósito da nossa caixa de matemática é mostrar que a matemática pode ser ensinada de uma forma mais leve, divertida e interessante para as crianças. Como o nosso alvo são crianças menores, pensamos em utilizar jogos, brincadeiras, dinâmicas e atividades que façam com que elas aprendam matemática enquanto brincam. A ideia é que a criança não veja a matemática apenas como contas e números, mas também consiga aprender através de situações do dia a dia, desenvolvendo o raciocínio lógico, a atenção, a coordenação e outras habilidades importantes.<br><br>Como a nossa caixa será apresentada em formato de site, nós conseguimos reunir várias dessas atividades em um só lugar, facilitando o acesso dos professores e também possibilitando que eles encontrem diferentes formas de trabalhar a matemática com as crianças de maneira mais divertida e participativa.<br><br>Então, o principal objetivo da nossa caixa é tornar o aprendizado da matemática mais dinâmico, fazendo com que a criança participe, explore e aprenda brincando.",
+        conteudo: []
     }
 };
 
@@ -75,11 +73,8 @@ function abrirGaveta(idGaveta) {
     
     if (!container || !gaveta) return;
 
-
     menuGavetas.classList.add('hidden');
     menuExtras.classList.add('hidden');
-
- 
     areaConteudo.classList.remove('hidden');
     
     let htmlContent = `
@@ -105,7 +100,6 @@ function abrirGaveta(idGaveta) {
     htmlContent += `</section>`;
     container.innerHTML = htmlContent;
 
-
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
@@ -114,11 +108,8 @@ function voltarAoMenu() {
     const menuExtras = document.getElementById('menu-extras');
     const areaConteudo = document.getElementById('area-conteudo-gaveta');
 
-  
     menuGavetas.classList.remove('hidden');
     menuExtras.classList.remove('hidden');
-
-  
     areaConteudo.classList.add('hidden');
 
     window.scrollTo({ top: 0, behavior: 'smooth' });
