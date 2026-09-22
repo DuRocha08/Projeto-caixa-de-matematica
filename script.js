@@ -1,13 +1,17 @@
 
 const bancoDeDadosGavetas = {
-    gaveta1: {
+   gaveta1: {
         titulo: "GAVETA 1 - materiais manipuláveis",
         introducao: "Nesta gaveta reunimos materiais concretos onde a criança aprende matemática tocando e experimentando. Baseados em Piaget, a criança constrói o número na ação, e em Montessori e Vygotsky, que defendem o material sensorial e a mediação. São materiais acessíveis para trabalhar classificação, contagem e valor posicional de forma concreta.",
         conteudo: [
             { subtitulo: "Materiais de construção geométrica", texto: "Incentivar os alunos a montar figuras e estruturas, desenvolvendo percepção espacial, formas geométricas e raciocínio lógico.", img: "img/formas.jpg" },
             { subtitulo: "Material de centena, dezena e unidade", texto: "Representar números de forma concreta, facilitando a compreensão do valor posicional e da composição e decomposição dos números.", img: "img/material-dourado.jpg" },
             { subtitulo: "Copos numerados", texto: "Relacionar números às respectivas quantidades, praticando contagem, ordenação e operações matemáticas.", img: "img/copos.jpg" },
-            { subtitulo: "Jogos de tabuleiro e trilhas numéricas", texto: "Desenvolver contagem, sequência numérica, adição, subtração e raciocínio lógico. Os cartões numéricos podem ser utilizados para trabalhar o reconhecimento e a sequência dos números, relacionando o algarismo à sua escrita por extenso.", img: "img/cartoes.jpg" }
+            { 
+                subtitulo: "Jogos de tabuleiro e trilhas numéricas", 
+                texto: "Desenvolver contagem, sequência numérica, adição, subtração e raciocínio lógico.<br><br>Os cartões numéricos podem ser utilizados para trabalhar o reconhecimento e a sequência dos números, relacionando o algarismo à sua escrita por extenso. Também podem ser usados em atividades de ordenação, comparação de quantidades, antecessor e sucessor, composição de números e operações simples.", 
+                img: "img/cartoes.jpg" 
+            }
         ]
     },
     gaveta2: {
