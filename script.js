@@ -38,17 +38,7 @@ const bancoDeDadosGavetas = {
         ]
     },
     gaveta4: {
-        titulo: "AUTORES E FILÓSOFOS",
-        introducao: "Nesta gaveta estão os autores que explicam por que ensinamos matemática manipulando, jogando, com mediação e partindo da realidade da criança.",
-        conteudo: [
-            { subtitulo: "JEAN PIAGET", texto: "<strong>Nome:</strong> Jean Piaget<br><strong>Conceito Matemático:</strong> Classificação, seriação e conservação do número.<br><strong>Quem é:</strong> Psicólogo suíço que mostrou que a criança constrói o número agindo sobre os objetos.<br><strong>Como usar na prática:</strong> Na Gaveta 1, deixar a criança classificar Blocos Lógicos, seriar tampinhas e conservar quantidades com massinha antes de fazer conta no papel.<br><strong>Fonte:</strong> PIAGET, J.; SZEMINSKA, A. A gênese do número na criança. Rio de Janeiro: Zahar, 1971.", img: "/img/piaget.jpg" },
-            { subtitulo: "LEV VYGOTSKY", texto: "<strong>Nome:</strong> Lev Vygotsky<br><strong>Conceito Matemático:</strong> Zona de Desenvolvimento Proximal (ZDP), mediação e linguagem.<br><strong>Quem é:</strong> Psicólogo russo. Defende que a criança aprende matemática com ajuda do outro, explicando como pensou.<br><strong>Como usar na prática:</strong> É a base da Gaveta 2 e da Gaveta 7. Usar jogos em duplas (um ajuda o outro), o professor faz mediação perguntando \"como você fez?\" e pede que a criança fale/registre a estratégia.<br><strong>Fonte:</strong> VYGOTSKY, L. S. A formação social da mente. São Paulo: Martins Fontes, 2007.", img: "/img/vygotsky.jpg" },
-            { subtitulo: "JOHN VAN DE WALLE", texto: "<strong>Nome:</strong> John Van de Walle<br><strong>Conceito Matemático:</strong> Valor posicional e resolução de problemas.<br><strong>Quem é:</strong> Defende que a aula começa com um problema, não com explicação. A criança cria a própria estratégia.<br><strong>Como usar na prática:</strong> Base da Gaveta 7. Propor \"Mostre o número 124 de 3 jeitos com o Material Dourado\". Aula em 3 tempos: lançar problema, deixar resolver, discutir soluções.<br><strong>Fonte:</strong> VAN DE WALLE, J. A. Matemática no Ensino Fundamental. Porto Alegre: Artmed, 2009.", img: "/img/vandewalle.jpg" },
-            { subtitulo: "UBIRATAN D'AMBROSIO", texto: "<strong>Nome:</strong> Ubiratan D'Ambrósio<br><strong>Conceito Matemático:</strong> Etnomatemática - matemática do cotidiano.<br><strong>Quem é:</strong> Brasileiro, pai da Etnomatemática. Mostra que existe matemática na feira, na receita, na construção.<br><strong>Como usar na prática:</strong> Justifica o uso de encartes de mercado, dinheiro de mentirinha e receitas na Gaveta 1. Aproxima a matemática da vida da criança.<br><strong>Fonte:</strong> D'AMBROSIO, U. Etnomatemática: elo entre as tradições e a modernidade. Belo Horizonte: Autêntica, 2001.", img: "/img/dambrosio.jpg" }
-        ]
-    },
-    gaveta5: {
-        titulo: "LITERATURA E MATEMÁTICA",
+        titulo: "LITERATURA",
         introducao: "Nesta gaveta mostramos que a literatura infantil é uma porta de entrada para a matemática na Educação Infantil. As histórias permitem trabalhar números, medidas e formas de modo afetivo e contextualizado, dentro dos campos de experiência da BNCC (EI03ET01 e EI03ET05). Organizamos os livros em três eixos: Números e Quantidade, Grandezas e Medidas e Espaço e Formas, para que o professor escolha de acordo com o conceito que quer explorar.<br><br><strong>Objetivo BNCC:</strong> EI03ET01 / EI03ET05 - Números, medidas, espaço e formas.",
         conteudo: [
             { subtitulo: "NÚMEROS E QUANTIDADE", texto: "• <strong>A Cesta de Dona Maricota</strong> (Autor: Tatiana Belinky | Idade: 2 a 5 anos)<br>Proposta: Trabalha a adição e a subtração com o contar das frutas.<br><br>• <strong>Dez Sacizinhos</strong> (Autor: Tatiana Belinky | Idade: 3 a 5 anos)<br>Proposta: Propõe a contagem regressiva de 10 a 1, sendo que, a cada página tira-se um Saci (lógica: 10-1).<br><br>• <strong>Um, Dois, Feijão com Arroz</strong> (Autor: Elza Beatriz | Idade: Bebês a 3 anos)<br>Proposta: Cantiga que usa da rima para a contagem de 1 a 10 com a ajuda dos dedos.<br><br>• <strong>Casa Sonolenta</strong> (Autor: Audrey Wood | Idade: 2 a 5 anos)<br>Proposta: Trabalha a sequência acumulativa e noção de peso." },
@@ -57,11 +47,21 @@ const bancoDeDadosGavetas = {
             { subtitulo: "PARA BEBÊS E CRIANÇAS BEM PEQUENAS", texto: "Livros recomendados:<br>• Dez Dedinhos<br>• Dez na Cama" }
         ]
     },
+    gaveta5: {
+        titulo: "AUTORES E TEÓRICOS",
+        introducao: "Nesta gaveta estão os autores que explicam por que ensinamos matemática manipulando, jogando, com mediação e partindo da realidade da criança.",
+        conteudo: [
+            { subtitulo: "JEAN PIAGET", texto: "<strong>Nome:</strong> Jean Piaget<br><strong>Conceito Matemático:</strong> Classificação, seriação e conservação do número.<br><strong>Quem é:</strong> Psicólogo suíço que mostrou que a criança constrói o número agindo sobre os objetos.<br><strong>Como usar na prática:</strong> Na Gaveta 1, deixar a criança classificar Blocos Lógicos, seriar tampinhas e conservar quantidades com massinha antes de fazer conta no papel.<br><strong>Fonte:</strong> PIAGET, J.; SZEMINSKA, A. A gênese do número na criança. Rio de Janeiro: Zahar, 1971.", img: "/img/piaget.jpg" },
+            { subtitulo: "LEV VYGOTSKY", texto: "<strong>Nome:</strong> Lev Vygotsky<br><strong>Conceito Matemático:</strong> Zona de Desenvolvimento Proximal (ZDP), mediação e linguagem.<br><strong>Quem é:</strong> Psicólogo russo. Defende que a criança aprende matemática com ajuda do outro, explicando como pensou.<br><strong>Como usar na prática:</strong> É a base da Gaveta 2 e da Gaveta 7. Usar jogos em duplas (um ajuda o outro), o professor faz mediação perguntando \"como você fez?\" e pede que a criança fale/registre a estratégia.<br><strong>Fonte:</strong> VYGOTSKY, L. S. A formação social da mente. São Paulo: Martins Fontes, 2007.", img: "/img/vygotsky.jpg" },
+            { subtitulo: "JOHN VAN DE WALLE", texto: "<strong>Nome:</strong> John Van de Walle<br><strong>Conceito Matemático:</strong> Valor posicional e resolução de problemas.<br><strong>Quem é:</strong> Defende que a aula começa com um problema, não com explicação. A criança cria a própria estratégia.<br><strong>Como usar na prática:</strong> Base da Gaveta 7. Propor \"Mostre o número 124 de 3 jeitos com o Material Dourado\". Aula em 3 tempos: lançar problema, deixar resolver, discutir soluções.<br><strong>Fonte:</strong> VAN DE WALLE, J. A. Matemática no Ensino Fundamental. Porto Alegre: Artmed, 2009.", img: "/img/vandewalle.jpg" },
+            { subtitulo: "UBIRATAN D'AMBROSIO", texto: "<strong>Nome:</strong> Ubiratan D'Ambrósio<br><strong>Conceito Matemático:</strong> Etnomatemática - matemática do cotidiano.<br><strong>Quem é:</strong> Brasileiro, pai da Etnomatemática. Mostra que existe matemática na feira, na receita, na construção.<br><strong>Como usar na prática:</strong> Justifica o uso de encartes de mercado, dinheiro de mentirinha e receitas na Gaveta 1. Aproxima a matemática da vida da criança.<br><strong>Fonte:</strong> D'AMBROSIO, U. Etnomatemática: elo entre as tradições e a modernidade. Belo Horizonte: Autêntica, 2001.", img: "/img/dambrosio.jpg" }
+        ]
+    },
     gaveta6: {
         titulo: "QUEM SOMOS NÓS?",
         introducao: `
             <div style="display: flex; flex-direction: column; gap: 20px; text-align: left;">
-                <p>O propósito da nossa caixa de matemática é mostrar que a matemática pode ser ensinada de uma forma mais leve, divertida e interessante para cácrianças. Como o nosso alvo são crianças menores, pensamos em utilizar jogos, brincadeiras, dinâmicas e atividades que façam com que elas aprendam matemática enquanto brincam.</p>
+                <p>O propósito da nossa caixa de matemática é mostrar que a matemática pode ser ensinada de uma forma mais leve, divertida e interessante para as crianças. Como o nosso alvo são crianças menores, pensamos em utilizar jogos, brincadeiras, dinâmicas e atividades que façam com que elas aprendam matemática enquanto brincam.</p>
                 
                 <div style="background-color: var(--meringue); padding: 15px 20px; border-radius: 12px; border-left: 5px solid var(--strawberry);">
                     <p style="margin: 0;">A ideia é que a criança não veja a matemática apenas como contas e números, mas também consiga aprender através de situações do dia a dia, desenvolvendo o raciocínio lógico, a atenção, a coordenação e outras habilidades importantes.</p>
@@ -84,145 +84,3 @@ const bancoDeDadosGavetas = {
         conteudo: []
     }
 };
-
-function abrirGaveta(idGaveta) {
-    const menuGavetas = document.getElementById('menu-gavetas');
-    const menuExtras = document.getElementById('menu-extras');
-    const areaConteudo = document.getElementById('area-conteudo-gaveta');
-    const container = document.getElementById('gavetas-container');
-    const gaveta = bancoDeDadosGavetas[idGaveta];
-    
-    if (!container || !gaveta) return;
-
-    if (menuGavetas) menuGavetas.classList.add('hidden');
-    if (menuExtras) menuExtras.classList.add('hidden');
-    if (areaConteudo) areaConteudo.classList.remove('hidden');
-    
-    let htmlContent = `
-        <section class="gaveta-section">
-            <h2>${gaveta.titulo}</h2>
-            <p class="intro-gaveta">${gaveta.introducao}</p>
-    `;
-    
-    if (gaveta.conteudo && gaveta.conteudo.length > 0) {
-        htmlContent += `<div class="gaveta-itens">`;
-        gaveta.conteudo.forEach(item => {
-            htmlContent += `<article class="item-card">`;
-            if (item.img) {
-                htmlContent += `<img src="${item.img}" alt="${item.subtitulo}" class="card-img">`;
-            }
-            htmlContent += `<h3>${item.subtitulo}</h3>`;
-            htmlContent += `<p>${item.texto}</p>`;
-            htmlContent += `</article>`;
-        });
-        htmlContent += `</div>`;
-    }
-    
-    htmlContent += `</section>`;
-    container.innerHTML = htmlContent;
-
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-
-function voltarAoMenu() {
-    const menuGavetas = document.getElementById('menu-gavetas');
-    const menuExtras = document.getElementById('menu-extras');
-    const areaConteudo = document.getElementById('area-conteudo-gaveta');
-    const container = document.getElementById('gavetas-container');
-
-    if (menuGavetas) menuGavetas.classList.remove('hidden');
-    if (menuExtras) menuExtras.classList.remove('hidden');
-    if (areaConteudo) areaConteudo.classList.add('hidden');
-    if (container) container.innerHTML = '';
-
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-
-async function criarAtividade(evento) {
-    if (evento) evento.preventDefault();
-
-    const form = document.getElementById('form-atividade') || document.querySelector('form');
-    if (!form) return;
-
-    const dadosAtividade = {
-        titulo: document.getElementById('titulo')?.value || '',
-        publico: document.getElementById('publico')?.value || '',
-        objetivo: document.getElementById('objetivo')?.value || '',
-        conceito: document.getElementById('conceito')?.value || '',
-        material: document.getElementById('material')?.value || '',
-        desenvolvimento: document.getElementById('desenvolvimento')?.value || '',
-        mediacao: document.getElementById('mediacao')?.value || '',
-        avaliacao: document.getElementById('avaliacao')?.value || '',
-        justificativa: document.getElementById('justificativa')?.value || '',
-        autor: document.getElementById('autor')?.value || '',
-        gaveta: document.getElementById('gaveta')?.value || ''
-    };
-
-    try {
-        const resposta = await fetch('/api/atividades', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(dadosAtividade)
-        });
-
-        if (resposta.ok) {
-            alert('Atividade criada e salva com sucesso para todo mundo ver!');
-            form.reset();
-            window.location.href = 'lista-de-atividades.html';
-        } else {
-            alert('Erro ao guardar a atividade no banco de dados. Verifique os campos.');
-        }
-    } catch (erro) {
-        console.error('Erro de conexão:', erro);
-        alert('Não foi possível conectar ao servidor.');
-    }
-}
-
-async function carregarAtividades() {
-    const containerAtividades = document.getElementById('lista-atividades');
-    if (!containerAtividades) return;
-
-    try {
-        const resposta = await fetch('/api/atividades');
-        if (!resposta.ok) throw new Error('Erro ao carregar atividades');
-        
-        const atividades = await resposta.json();
-        
-        if (atividades.length === 0) {
-            containerAtividades.innerHTML = '<p style="text-align: center;">Ainda não há atividades cadastradas.</p>';
-            return;
-        }
-
-        let html = '<div class="grid-atividades">';
-        atividades.forEach(atv => {
-            html += `
-                <article class="atividade-card item-card">
-                    <h3>${atv.titulo}</h3>
-                    <p><strong>Público:</strong> ${atv.publico}</p>
-                    <p><strong>Objetivo:</strong> ${atv.objetivo}</p>
-                    <p><strong>Conceito:</strong> ${atv.conceito}</p>
-                    <p><strong>Desenvolvimento:</strong> ${atv.desenvolvimento}</p>
-                    <p><small>Criado por: ${atv.autor || 'Anônimo'} | Gaveta: ${atv.gaveta}</small></p>
-                </article>
-            `;
-        });
-        html += '</div>';
-        containerAtividades.innerHTML = html;
-    } catch (erro) {
-        console.error('Erro:', erro);
-        containerAtividades.innerHTML = '<p style="text-align: center;">Erro ao carregar as atividades do servidor.</p>';
-    }
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-    const formAtividade = document.getElementById('form-atividade');
-    if (formAtividade) {
-        formAtividade.addEventListener('submit', criarAtividade);
-    }
-    
-    if (document.getElementById('lista-atividades')) {
-        carregarAtividades();
-    }
-});
