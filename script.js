@@ -31,30 +31,30 @@ const bancoDeDadosGavetas = {
         introducao: "Vídeos lúdicos para ensinar matemática de forma visual e divertida.",
         conteudo: [
             { subtitulo: "Vídeo 1 - Descobrindo a adição", texto: "Link: https://youtu.be/5VoXOFOSETI <br>Trabalha a ideia de juntar e acrescentar quantidades. BNCC: EF01MA06 e EF01MA08." },
-            { subtitulo: "Vídeo 2 - Unidade e dezena", texto: "Link: https://youtu.be/O17tkPBHmol <br>Canal: Alfabrinca. Unidades, dezenas e contagem." },
-            { subtitulo: "Vídeo 3 - Quiz das formas geométricas", texto: "Link: https://youtu.be/sXfj2Qh88h0 <br>Figuras como círculo, quadrado, triângulo e retângulo." },
-            { subtitulo: "Vídeo 4 - Soma com dinossauros", texto: "Link: https://youtu.be/prsJNR0Zbqg <br>Canal: Smile and Learn. Adição lúdica." },
-            { subtitulo: "Vídeo 5 - Subtração com dinossauros", texto: "Link: https://youtu.be/V0NVAh4Adxs <br>Canal: Smile and Learn. Subtração e separação." }
+            { subtitulo: "Vídeo 2 - Unidade e dezena", texto: "Link: https://youtu.be/O17tkPBHmol <br>Canal: Alfabrinca. Trabalha unidades, dezenas e contagem. BNCC: EF01MA01, EF01MA02, EF01MA05 e EF01MA07." },
+            { subtitulo: "Vídeo 3 - Quiz das formas geométricas", texto: "Link: https://youtu.be/sXfj2Qh88h0 <br>Trabalha figuras como círculo, quadrado, triângulo e retângulo. BNCC: EF01MA14." },
+            { subtitulo: "Vídeo 4 - Soma com dinossauros", texto: "Link: https://youtu.be/prsJNR0Zbqg <br>Canal: Smile and Learn. Ensina adição de forma lúdica. BNCC: EF01MA06 e EF01MA08." },
+            { subtitulo: "Vídeo 5 - Subtração com dinossauros", texto: "Link: https://youtu.be/V0NVAh4Adxs <br>Canal: Smile and Learn. Trabalha a ideia de retirar e separar. BNCC: EF01MA06 e EF01MA08." }
         ]
     },
     gaveta5: {
         titulo: "LITERATURA",
         introducao: "A literatura infantil como porta de entrada para a matemática na Educação Infantil.",
         conteudo: [
-            { subtitulo: "NÚMEROS E QUANTIDADE", texto: "• A Cesta de Dona Maricota (Tatiana Belinky)<br>• Dez Sacizinhos (Tatiana Belinky)" },
-            { subtitulo: "GRANDEZAS E MEDIDAS", texto: "• Quem vai ficar com o pêssego? (Yoon Ah-Hae)<br>• O Grande Rabanete (Tatiana Belinky)" },
-            { subtitulo: "ESPAÇO E FORMAS", texto: "• Clact... Clact... Clact... (Liliana Cinetto)<br>• O Ponto (Peter H. Reynolds)" },
-            { subtitulo: "PARA BEBÊS", texto: "Livros: Dez Dedinhos, Dez na Cama." }
+            { subtitulo: "NÚMEROS E QUANTIDADE", texto: "• A Cesta de Dona Maricota (Tatiana Belinky)<br>• Dez Sacizinhos (Tatiana Belinky)<br>• Um, Dois, Feijão com Arroz (Elza Beatriz)<br>• Casa Sonolenta (Audrey Wood)" },
+            { subtitulo: "GRANDEZAS E MEDIDAS", texto: "• Quem vai ficar com o pêssego? (Yoon Ah-Hae)<br>• Cachinhos Dourados e os Três Ursos (Joseph Cundall)<br>• O Grande Rabanete (Tatiana Belinky)" },
+            { subtitulo: "ESPAÇO E FORMAS", texto: "• Clact... Clact... Clact... (Liliana Cinetto)<br>• O Ponto (Peter H. Reynolds)<br>• Três Gatos (Eva Furnari)" },
+            { subtitulo: "PARA BEBÊS E CRIANÇAS BEM PEQUENAS", texto: "Livros:<br>• Dez Dedinhos<br>• Dez na Cama" }
         ]
     },
     gaveta6: {
         titulo: "AUTORES E TEÓRICOS",
         introducao: "Autores que explicam por que ensinamos matemática manipulando, jogando e com mediação.",
         conteudo: [
-            { subtitulo: "JEAN PIAGET", texto: "Classificação, seriação e conservação do número.", img: "img/piaget.jpg" },
-            { subtitulo: "LEV VYGOTSKY", texto: "Zona de Desenvolvimento Proximal (ZDP), mediação e linguagem.", img: "img/vygotsky.jpg" },
-            { subtitulo: "JOHN VAN DE WALLE", texto: "Valor posicional e resolução de problemas.", img: "img/vandewalle.jpg" },
-            { subtitulo: "UBIRATAN D'AMBROSIO", texto: "Etnomatemática (matemática do cotidiano).", img: "img/dambrosio.jpg" }
+            { subtitulo: "JEAN PIAGET", texto: "Conceito: Classificação, seriação e conservação do número. Mostrou que a criança constrói o número agindo sobre os objetos.", img: "img/piaget.jpg" },
+            { subtitulo: "LEV VYGOTSKY", texto: "Conceito: Zona de Desenvolvimento Proximal (ZDP), mediação e linguagem. A criança aprende matemática com ajuda do outro.", img: "img/vygotsky.jpg" },
+            { subtitulo: "JOHN VAN DE WALLE", texto: "Conceito: Valor posicional e resolução de problemas. A aula começa com um problema, a criança cria a própria estratégia.", img: "img/vandewalle.jpg" },
+            { subtitulo: "UBIRATAN D'AMBROSIO", texto: "Conceito: Etnomatemática (matemática do cotidiano). Mostra que existe matemática na feira, na receita, na construção.", img: "img/dambrosio.jpg" }
         ]
     },
     gaveta7: {
@@ -73,9 +73,9 @@ function abrirGaveta(idGaveta) {
     
     if (!container || !gaveta) return;
 
-    menuGavetas.classList.add('hidden');
-    menuExtras.classList.add('hidden');
-    areaConteudo.classList.remove('hidden');
+    if (menuGavetas) menuGavetas.classList.add('hidden');
+    if (menuExtras) menuExtras.classList.add('hidden');
+    if (areaConteudo) areaConteudo.classList.remove('hidden');
     
     let htmlContent = `
         <section class="gaveta-section">
@@ -109,12 +109,10 @@ function voltarAoMenu() {
     const areaConteudo = document.getElementById('area-conteudo-gaveta');
     const container = document.getElementById('gavetas-container');
 
- 
-    menuGavetas.classList.remove('hidden');
-    menuExtras.classList.remove('hidden');
-
-  
-    areaConteudo.classList.add('hidden');
-    container.innerHTML = '';
+    if (menuGavetas) menuGavetas.classList.remove('hidden');
+    if (menuExtras) menuExtras.classList.remove('hidden');
+    if (areaConteudo) areaConteudo.classList.add('hidden');
+    if (container) container.innerHTML = '';
 
     window.scrollTo({ top: 0, behavior: 'smooth' });
+}
