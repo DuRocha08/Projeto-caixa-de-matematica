@@ -299,3 +299,11 @@ button:active, .tab-btn:active, .btn-gaveta:active, header a:active, input[type=
         margin-bottom: 8px;
     }
 }
+
+.btn-voltar {
+    flex: unset !important;
+    width: auto !important;
+    max-width: none !important;
+    display: inline-block !important;
+    padding: 12px 28px !important;
+}
