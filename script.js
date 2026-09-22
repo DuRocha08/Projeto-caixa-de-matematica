@@ -1,13 +1,19 @@
 const bancoDeDadosGavetas = {
     gaveta1: {
         titulo: "MATERIAIS MANIPULÁVEIS",
-        introducao: "Nesta gaveta reunimos materiais concretos onde a criança aprende matemática tocando e experimentando. Baseados em Piaget, a criança constrói o número na ação, e em Montessori e Vygotsky, que defendem o material sensorial e a mediação.",
+        introducao: "Nesta gaveta reunimos materiais concretos onde a criança aprende matemática tocando e experimentando. Baseados em Piaget, a criança constrói o número na ação, e em Montessori e Vygotsky, que defendem o material sensorial e a mediação. São materiais acessíveis para trabalhar classificação, contagem e valor posicional de forma concreta.",
         conteudo: [
             { subtitulo: "Materiais de construção geométrica", texto: "Incentivar os alunos a montar figuras e estruturas, desenvolvendo percepção espacial, formas geométricas e raciocínio lógico.", img: "/img/formas.jpg" },
             { subtitulo: "Material de centena, dezena e unidade", texto: "Representar números de forma concreta, facilitando a compreensão do valor posicional e da composição e decomposição dos números.", img: "/img/material-dourado.jpg" },
             { subtitulo: "Copos numerados", texto: "Relacionar números às respectivas quantidades, praticando contagem, ordenação e operações matemáticas.", img: "/img/copos.jpg" },
             { subtitulo: "Jogos de tabuleiro e trilhas numéricas", texto: "Desenvolver contagem, sequência numérica, adição, subtração e raciocínio lógico.", img: "/img/tabuleiro.jpg" },
-            { subtitulo: "Cartões Numéricos", texto: "Os cartões numéricos podem ser utilizados para trabalhar o reconhecimento e a sequência dos números, relacionando o algarismo à sua escrita por extenso.", img: "/img/cartoes.jpg" }
+            { subtitulo: "Cartões Numéricos", texto: "Os cartões numéricos podem ser utilizados para trabalhar o reconhecimento e a sequência dos números, relacionando o algarismo à sua escrita por extenso, além de antecessor, sucessor e operações simples.", img: "/img/cartoes.jpg" },
+            { subtitulo: "Dados com números e operações", texto: "Propor desafios de cálculo, como lançar os dados e realizar a operação indicada, trabalhando as quatro operações básicas de forma lúdica.", img: "/img/dados.jpg" },
+            { subtitulo: "Dinheirinho de brinquedo", texto: "Simulações de compras e vendas para ensinar matemática de forma prática, trabalhando o reconhecimento de valores, operações e cálculo de troco.", img: "/img/dinheirinho.jpg" },
+            { subtitulo: "Fita Métrica", texto: "Utilizada de forma prática para ensinar medidas de comprimento. Os alunos podem medir objetos, móveis e partes do próprio corpo, comparando centímetros e metros.", img: "/img/fita-metrica.jpg" },
+            { subtitulo: "Elásticos e Palitos de sorvete", texto: "Podem ser utilizados juntos para trabalhar conceitos de medida, comprimento, comparação e geometria de maneira criativa.", img: "/img/palitos.jpg" },
+            { subtitulo: "Tampinhas e Pedras", texto: "Materiais concretos para desenvolver o raciocínio matemático através de contagem, agrupamento, classificação por cores/tamanhos, adição e subtração.", img: "/img/tampinhas.jpg" },
+            { subtitulo: "Jogo de Adição com Tampinhas", texto: "Desenvolve o cálculo e o raciocínio lógico[cite: 11]. O aluno escolhe uma operação na cartela, resolve a adição e procura a tampinha com o resultado correto para colocá-la no espaço correspondente[cite: 11].", img: "/img/jogo-tampinhas.jpg" }
         ]
     },
     gaveta2: {
