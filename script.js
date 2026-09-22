@@ -57,12 +57,29 @@ const bancoDeDadosGavetas = {
             { subtitulo: "UBIRATAN D'AMBROSIO", texto: "Conceito: Etnomatemática (matemática do cotidiano). Mostra que existe matemática na feira, na receita, na construção.", img: "/img/dambrosio.jpg" }
         ]
     },
-    gaveta7: {
+   gaveta7: {
         titulo: "QUEM SOMOS NÓS?",
-        introducao: "O propósito da nossa caixa de matemática é mostrar que a matemática pode ser ensinada de uma forma mais leve, divertida e interessante para as crianças. Como o nosso alvo são crianças menores, pensamos em utilizar jogos, brincadeiras, dinâmicas e atividades que façam com que elas aprendam matemática enquanto brincam. A ideia é que a criança não veja a matemática apenas como contas e números, mas também consiga aprender através de situações do dia a dia, desenvolvendo o raciocínio lógico, a atenção, a coordenação e outras habilidades importantes.<br><br>Como a nossa caixa será apresentada em formato de site, nós conseguimos reunir várias dessas atividades em um só lugar, facilitando o acesso dos professores e também possibilitando que eles encontrem diferentes formas de trabalhar a matemática com as crianças de maneira mais divertida e participativa.<br><br>Então, o principal objetivo da nossa caixa é tornar o aprendizado da matemática mais dinâmico, fazendo com que a criança participe, explore e aprenda brincando.",
+        introducao: `
+            <div style="display: flex; flex-direction: column; gap: 20px; text-align: left;">
+                <p>O propósito da nossa <strong>Caixa de Matemática</strong> é mostrar que a matemática pode ser ensinada de uma forma mais leve, divertida e interessante para as crianças. Como o nosso público-alvo são os pequenos, apostamos em jogos, brincadeiras, dinâmicas e atividades que permitem aprender enquanto se brinca!</p>
+                
+                <div style="background-color: var(--meringue); padding: 15px 20px; border-radius: 12px; border-left: 5px solid var(--strawberry);">
+                    <h3 style="color: var(--blueberry); margin-bottom: 8px; font-size: 1.1rem;"> Nosso Propósito</h3>
+                    <p style="margin: 0;">Fazer com que a criança não veja a matemática apenas como contas e números, mas consiga aprender através de situações do dia a dia, desenvolvendo o raciocínio lógico, a atenção e a coordenação.</p>
+                </div>
+
+                <div style="background-color: var(--meringue); padding: 15px 20px; border-radius: 12px; border-left: 5px solid var(--violet);">
+                    <h3 style="color: var(--blueberry); margin-bottom: 8px; font-size: 1.1rem;">💻 O Projeto Digital</h3>
+                    <p style="margin: 0;">Em formato de site, conseguimos reunir várias dessas atividades em um só lugar. Isso facilita o acesso dos professores e oferece diferentes caminhos para trabalhar a matemática de maneira participativa e alegre.</p>
+                </div>
+
+                <p style="text-align: center; font-weight: bold; color: var(--blueberry); margin-top: 10px;">
+                     Nosso principal objetivo: tornar o aprendizado dinâmico para que a criança participe, explore e aprenda brincando! 
+                </p>
+            </div>
+        `,
         conteudo: []
     }
-};
 
 function abrirGaveta(idGaveta) {
     const menuGavetas = document.getElementById('menu-gavetas');
