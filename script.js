@@ -30,11 +30,11 @@ const bancoDeDadosGavetas = {
         titulo: "CANAIS E CONTEÚDOS",
         introducao: "Vídeos lúdicos para ensinar matemática de forma visual e divertida.",
         conteudo: [
-            { subtitulo: "Vídeo 1 - Descobrindo a adição", texto: "Link: https://youtu.be/5VoXOFOSETI <br>Trabalha a ideia de juntar e acrescentar quantidades. BNCC: EF01MA06 e EF01MA08." },
-            { subtitulo: "Vídeo 2 - Unidade e dezena", texto: "Link: https://youtu.be/O17tkPBHmol <br>Canal: Alfabrinca. Trabalha unidades, dezenas e contagem. BNCC: EF01MA01, EF01MA02, EF01MA05 e EF01MA07." },
-            { subtitulo: "Vídeo 3 - Quiz das formas geométricas", texto: "Link: https://youtu.be/sXfj2Qh88h0 <br>Trabalha figuras como círculo, quadrado, triângulo e retângulo. BNCC: EF01MA14." },
-            { subtitulo: "Vídeo 4 - Soma com dinossauros", texto: "Link: https://youtu.be/prsJNR0Zbqg <br>Canal: Smile and Learn. Ensina adição de forma lúdica. BNCC: EF01MA06 e EF01MA08." },
-            { subtitulo: "Vídeo 5 - Subtração com dinossauros", texto: "Link: https://youtu.be/V0NVAh4Adxs <br>Canal: Smile and Learn. Trabalha a ideia de retirar e separar. BNCC: EF01MA06 e EF01MA08." }
+            { subtitulo: "Descobrindo a adição", texto: "Link: https://youtu.be/5VoXOFOSETI <br>Trabalha a ideia de juntar e acrescentar quantidades. BNCC: EF01MA06 e EF01MA08." },
+            { subtitulo: "Unidade e dezena", texto: "Link: https://youtu.be/O17tkPBHmol <br>Canal: Alfabrinca. Trabalha unidades, dezenas e contagem. BNCC: EF01MA01, EF01MA02, EF01MA05 e EF01MA07." },
+            { subtitulo: "Quiz das formas geométricas", texto: "Link: https://youtu.be/sXfj2Qh88h0 <br>Trabalha figuras como círculo, quadrado, triângulo e retângulo. BNCC: EF01MA14." },
+            { subtitulo: "Soma com dinossauros", texto: "Link: https://youtu.be/prsJNR0Zbqg <br>Canal: Smile and Learn. Ensina adição de forma lúdica. BNCC: EF01MA06 e EF01MA08." },
+            { subtitulo: "Subtração com dinossauros", texto: "Link: https://youtu.be/V0NVAh4Adxs <br>Canal: Smile and Learn. Trabalha a ideia de retirar e separar. BNCC: EF01MA06 e EF01MA08." }
         ]
     },
     gaveta5: {
