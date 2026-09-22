@@ -1,6 +1,6 @@
 const bancoDeDadosGavetas = {
     gaveta1: {
-        titulo: "MATERIAIS MANIPULÁVEIS",
+        titulo: "MATERIAIS MANIPULÁ VEIS",
         introducao: "Nesta gaveta reunimos materiais concretos onde a criança aprende matemática tocando e experimentando. Baseados em Piaget, a criança constrói o número na ação, e em Montessori e Vygotsky, que defendem o material sensorial e a mediação.",
         conteudo: [
             { subtitulo: "Materiais de construção geométrica", texto: "Incentivar os alunos a montar figuras e estruturas, desenvolvendo percepção espacial, formas geométricas e raciocínio lógico.", img: "/img/formas.jpg" },
