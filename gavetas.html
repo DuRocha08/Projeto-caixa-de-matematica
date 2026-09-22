@@ -8,23 +8,27 @@
 </head>
 <body>
     <header>
-        <h1>Conteúdo das Gavetas</h1>
+        <h1>Caixa de Matemática</h1>
         <nav>
             <a href="index.html" class="btn-voltar">Voltar para o Início</a>
         </nav>
     </header>
     
-   
     <div class="container">
-        <h2>O que mais deseja fazer?</h2>
+        <h2>Em qual gaveta vamos guardar?</h2>
+        
+        
         <div class="tabs">
-            <a href="lista-recursos.html" class="btn-gaveta">Ver Todos os Recursos</a>
-            <a href="atividade.html" class="btn-gaveta">Criar Atividade</a>
-            <a href="lista-de-atividades.html" class="btn-gaveta">Ver Atividades (todas)</a>
+            <button class="tab-btn" onclick="mostrarGaveta('gaveta1')">Materiais manipuláveis</button>
+            <button class="tab-btn" onclick="mostrarGaveta('gaveta2')">Jogos e brincadeiras</button>
+            <button class="tab-btn" onclick="mostrarGaveta('gaveta3')">Recursos digitais</button>
+            <button class="tab-btn" onclick="mostrarGaveta('gaveta4')">Canais e conteúdos</button>
+            <button class="tab-btn" onclick="mostrarGaveta('gaveta5')">Literatura</button>
+            <button class="tab-btn" onclick="mostrarGaveta('gaveta6')">Autores e Teóricos</button>
+            <button class="tab-btn" onclick="mostrarGaveta('gaveta7')">Ideias Novas</button>
         </div>
     </div>
 
-    
     <main id="gavetas-container">
     </main>
 
