@@ -57,14 +57,14 @@ const bancoDeDadosGavetas = {
             { subtitulo: "UBIRATAN D'AMBROSIO", texto: "Conceito: Etnomatemática (matemática do cotidiano). Mostra que existe matemática na feira, na receita, na construção.", img: "/img/dambrosio.jpg" }
         ]
     },
-   gaveta7: {
+    gaveta7: {
         titulo: "QUEM SOMOS NÓS?",
         introducao: `
             <div style="display: flex; flex-direction: column; gap: 20px; text-align: left;">
                 <p>O propósito da nossa <strong>Caixa de Matemática</strong> é mostrar que a matemática pode ser ensinada de uma forma mais leve, divertida e interessante para as crianças. Como o nosso público-alvo são os pequenos, apostamos em jogos, brincadeiras, dinâmicas e atividades que permitem aprender enquanto se brinca!</p>
                 
                 <div style="background-color: var(--meringue); padding: 15px 20px; border-radius: 12px; border-left: 5px solid var(--strawberry);">
-                    <h3 style="color: var(--blueberry); margin-bottom: 8px; font-size: 1.1rem;"> Nosso Propósito</h3>
+                    <h3 style="color: var(--blueberry); margin-bottom: 8px; font-size: 1.1rem;">💡 Nosso Propósito</h3>
                     <p style="margin: 0;">Fazer com que a criança não veja a matemática apenas como contas e números, mas consiga aprender através de situações do dia a dia, desenvolvendo o raciocínio lógico, a atenção e a coordenação.</p>
                 </div>
 
@@ -74,12 +74,13 @@ const bancoDeDadosGavetas = {
                 </div>
 
                 <p style="text-align: center; font-weight: bold; color: var(--blueberry); margin-top: 10px;">
-                     Nosso principal objetivo: tornar o aprendizado dinâmico para que a criança participe, explore e aprenda brincando! 
+                    ✨ Nosso principal objetivo: tornar o aprendizado dinâmico para que a criança participe, explore e aprenda brincando! ✨
                 </p>
             </div>
         `,
         conteudo: []
     }
+};
 
 function abrirGaveta(idGaveta) {
     const menuGavetas = document.getElementById('menu-gavetas');
