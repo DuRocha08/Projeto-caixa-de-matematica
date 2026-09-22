@@ -64,7 +64,6 @@ const bancoDeDadosGavetas = {
     }
 };
 
-
 function abrirGaveta(idGaveta) {
     const menuGavetas = document.getElementById('menu-gavetas');
     const menuExtras = document.getElementById('menu-extras');
@@ -118,7 +117,6 @@ function voltarAoMenu() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-
 async function criarAtividade(evento) {
     if (evento) evento.preventDefault();
 
@@ -161,9 +159,8 @@ async function criarAtividade(evento) {
     }
 }
 
-
 async function carregarAtividades() {
-    const containerAtividades = document.getElementById('lista-atividades-container');
+    const containerAtividades = document.getElementById('lista-atividades');
     if (!containerAtividades) return;
 
     try {
@@ -173,7 +170,7 @@ async function carregarAtividades() {
         const atividades = await resposta.json();
         
         if (atividades.length === 0) {
-            containerAtividades.innerHTML = '<p>Ainda não há atividades cadastradas.</p>';
+            containerAtividades.innerHTML = '<p style="text-align: center;">Ainda não há atividades cadastradas.</p>';
             return;
         }
 
@@ -194,10 +191,9 @@ async function carregarAtividades() {
         containerAtividades.innerHTML = html;
     } catch (erro) {
         console.error('Erro:', erro);
-        containerAtividades.innerHTML = '<p>Erro ao carregar as atividades do servidor.</p>';
+        containerAtividades.innerHTML = '<p style="text-align: center;">Erro ao carregar as atividades do servidor.</p>';
     }
 }
-
 
 document.addEventListener('DOMContentLoaded', () => {
     const formAtividade = document.getElementById('form-atividade');
@@ -205,7 +201,7 @@ document.addEventListener('DOMContentLoaded', () => {
         formAtividade.addEventListener('submit', criarAtividade);
     }
     
-    if (document.getElementById('lista-atividades-container')) {
+    if (document.getElementById('lista-atividades')) {
         carregarAtividades();
     }
 });
