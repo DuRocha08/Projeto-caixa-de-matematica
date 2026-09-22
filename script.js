@@ -107,10 +107,14 @@ function voltarAoMenu() {
     const menuGavetas = document.getElementById('menu-gavetas');
     const menuExtras = document.getElementById('menu-extras');
     const areaConteudo = document.getElementById('area-conteudo-gaveta');
+    const container = document.getElementById('gavetas-container');
 
+ 
     menuGavetas.classList.remove('hidden');
     menuExtras.classList.remove('hidden');
+
+  
     areaConteudo.classList.add('hidden');
+    container.innerHTML = '';
 
     window.scrollTo({ top: 0, behavior: 'smooth' });
-}
