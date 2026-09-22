@@ -162,9 +162,50 @@ async function criarAtividade(evento) {
 }
 
 
+async function carregarAtividades() {
+    const containerAtividades = document.getElementById('lista-atividades-container');
+    if (!containerAtividades) return;
+
+    try {
+        const resposta = await fetch('/api/atividades');
+        if (!resposta.ok) throw new Error('Erro ao carregar atividades');
+        
+        const atividades = await resposta.json();
+        
+        if (atividades.length === 0) {
+            containerAtividades.innerHTML = '<p>Ainda não há atividades cadastradas.</p>';
+            return;
+        }
+
+        let html = '<div class="grid-atividades">';
+        atividades.forEach(atv => {
+            html += `
+                <article class="atividade-card item-card">
+                    <h3>${atv.titulo}</h3>
+                    <p><strong>Público:</strong> ${atv.publico}</p>
+                    <p><strong>Objetivo:</strong> ${atv.objetivo}</p>
+                    <p><strong>Conceito:</strong> ${atv.conceito}</p>
+                    <p><strong>Desenvolvimento:</strong> ${atv.desenvolvimento}</p>
+                    <p><small>Criado por: ${atv.autor || 'Anônimo'} | Gaveta: ${atv.gaveta}</small></p>
+                </article>
+            `;
+        });
+        html += '</div>';
+        containerAtividades.innerHTML = html;
+    } catch (erro) {
+        console.error('Erro:', erro);
+        containerAtividades.innerHTML = '<p>Erro ao carregar as atividades do servidor.</p>';
+    }
+}
+
+
 document.addEventListener('DOMContentLoaded', () => {
     const formAtividade = document.getElementById('form-atividade');
     if (formAtividade) {
         formAtividade.addEventListener('submit', criarAtividade);
+    }
+    
+    if (document.getElementById('lista-atividades-container')) {
+        carregarAtividades();
     }
 });
