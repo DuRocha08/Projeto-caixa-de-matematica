@@ -318,20 +318,21 @@ button:active, .tab-btn:active, .btn-gaveta:active, header a:active, input[type=
 
 .grid-atividades {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
+    
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
     width: 100%;
     max-width: 1350px;
     margin: 0 auto;
     padding: 20px;
 }
 
-@media (min-width: 1100px) {
-    .grid-atividades {
-        grid-template-columns: repeat(5, 1fr);
-    }
+.atividade-card {
+    width: 100%;
+    box-sizing: border-box;
+ 
+    word-break: break-word; 
 }
-
 .atividade-card {
     width: 100%;
     box-sizing: border-box;
