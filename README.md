@@ -13,9 +13,9 @@ Integração na Nuvem: Banco de dados que permite visualizar todos os recursos e
 Interface Lúdica: Design responsivo, colorido e amigável (estilo aplicativo educativo).
 
 Tecnologias Utilizadas
-Frontend: HTML5, CSS3 (com tipografia do Google Fonts) e Vanilla JavaScript.
+Frontend: HTML5, CSS3 e Vanilla JavaScript.
 Backend: API (Node.js) para comunicação com o banco de dados.
-Banco de Dados: MySQL para armazenamento persistente na nuvem.
+Banco de Dados: Supabase para armazenamento persistente na nuvem.
 
 Telas do Projeto
 Página Inicial: Boas-vindas e entrada no sistema.
