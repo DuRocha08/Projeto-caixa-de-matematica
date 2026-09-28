@@ -135,9 +135,12 @@ p, label, span, .info-p {
 
 .grid-atividades, .gaveta-itens {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 25px;
     width: 100%;
+    max-width: 1350px;
+    margin: 0 auto;
+    padding: 20px 0;
 }
 
 .card-recurso, .atividade-card, .item-card {
@@ -155,6 +158,9 @@ p, label, span, .info-p {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    width: 100%;
+    box-sizing: border-box;
+    word-break: break-word; 
 }
 
 .card-recurso:hover, .atividade-card:hover, .item-card:hover {
@@ -294,6 +300,13 @@ button:active, .tab-btn:active, .btn-gaveta:active, header a:active, input[type=
     display: none !important; 
 }
 
+
+body:has(#area-conteudo-gaveta:not(.hidden)) #header-principal,
+body:has(#area-conteudo-gaveta:not(.hidden)) #menu-gavetas,
+body:has(#area-conteudo-gaveta:not(.hidden)) #menu-extras {
+    display: none !important;
+}
+
 @media (max-width: 768px) {
     body {
         padding: 15px 8px;
@@ -314,33 +327,17 @@ button:active, .tab-btn:active, .btn-gaveta:active, header a:active, input[type=
         margin-right: 0;
         margin-bottom: 8px;
     }
-}
-
-.grid-atividades {
-    display: grid;
-    
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 25px;
-    width: 100%;
-    max-width: 1350px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-.atividade-card {
-    width: 100%;
-    box-sizing: border-box;
- 
-    word-break: break-word; 
-}
-.atividade-card {
-    width: 100%;
-    box-sizing: border-box;
-}
 
 
-body:has(#area-conteudo-gaveta:not(.hidden)) #header-principal,
-body:has(#area-conteudo-gaveta:not(.hidden)) #menu-gavetas,
-body:has(#area-conteudo-gaveta:not(.hidden)) #menu-extras {
-    display: none !important;
+    .grid-atividades, .gaveta-itens {
+        grid-template-columns: 1fr !important;
+        gap: 15px; 
+        padding: 10px 0; 
+        width: 100%;
+    }
+
+    .atividade-card, .item-card, .card-recurso {
+        width: 100%;
+        margin: 0;
+    }
 }
