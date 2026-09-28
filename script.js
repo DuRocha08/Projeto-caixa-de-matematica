@@ -156,6 +156,8 @@ async function criarAtividade(evento) {
         material: document.getElementById('material')?.value || '',
         desenvolvimento: document.getElementById('desenvolvimento')?.value || '',
         mediacao: document.getElementById('mediacao')?.value || '',
+        // Adicionamos a Ação do Professor aqui também para cobrir todas as possibilidades:
+        acaoProfessor: document.getElementById('acao_professor')?.value || '', 
         avaliacao: document.getElementById('avaliacao')?.value || '',
         justificativa: document.getElementById('justificativa')?.value || '',
         autor: document.getElementById('autor')?.value || '',
@@ -208,6 +210,10 @@ async function carregarAtividades() {
                     <p><strong>Objetivo:</strong> ${atv.objetivo}</p>
                     <p><strong>Conceito:</strong> ${atv.conceito}</p>
                     <p><strong>Desenvolvimento:</strong> ${atv.desenvolvimento}</p>
+                    
+                    <!-- LINHA ADICIONADA: Agora exibe a Ação/Mediação do professor na tela! -->
+                    <p><strong>Ação do Professor / Mediação:</strong> ${atv.acaoProfessor || atv.mediacao || 'Não informado'}</p>
+                    
                     <p><small>Criado por: ${atv.autor || 'Anônimo'} | Gaveta: ${atv.gaveta}</small></p>
                 </article>
             `;
